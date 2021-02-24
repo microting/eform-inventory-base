@@ -37,5 +37,3 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: Unit Tests
       run: dotnet test --no-restore -c Release -v n Microting.eFormInventoryBase.Unit.Tests/Microting.eFormInventoryBase.Unit.Tests.csproj
-    - name: Integration Tests
-      run: dotnet test --no-restore -c Release -v n Microting.eFormInventoryBase.Integration.Tests/Microting.eFormInventoryBase.Integration.Tests.csproj
