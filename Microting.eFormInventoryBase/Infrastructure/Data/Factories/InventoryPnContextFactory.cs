@@ -1,4 +1,4 @@
-/*
+﻿/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,10 +17,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-namespace Microting.eFormInventoryBase
+
+namespace Microting.eFormInventoryBase.Infrastructure.Data.Factories
 {
-    public class DbConfig
+    using System;
+    using System.Linq;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Design;
+    using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
+    public class InventoryPnContextFactory : IDesignTimeDbContextFactory<InventoryPnDbContext>
     {
-        public static bool IsMysql = false;
+        public InventoryPnDbContext CreateDbContext(string[] args)
+        {
+            const string defaultCs = "Server = localhost; port = 3306; Database = inventory-pn; user = root; password = Qq1234567$;Convert Zero Datetime = true;";
+            var optionsBuilder = new DbContextOptionsBuilder<InventoryPnDbContext>();
+
+            optionsBuilder.UseMySql(args.Any() ? args[0] : defaultCs, mysqlOptions =>
+            {
+                mysqlOptions.ServerVersion(new Version(10, 4, 0), ServerType.MariaDb);
+            });
+
+            return new InventoryPnDbContext(optionsBuilder.Options);
+            // dotnet ef migrations add InitialCreate --project Microting.eFormInventoryBase --startup-project DBMigrator
+        }
     }
 }

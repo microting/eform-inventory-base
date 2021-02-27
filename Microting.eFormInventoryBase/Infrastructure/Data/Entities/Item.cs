@@ -1,4 +1,4 @@
-/*
+﻿/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,10 +17,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-namespace Microting.eFormInventoryBase
+
+namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
-    public class DbConfig
+    using System;
+
+    public class Item: PnBase
     {
-        public static bool IsMysql = false;
+        public int ItemTypeId { get; set; }
+
+        public virtual ItemType ItemType { get; set; }
+
+        public string Location { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public DateTime ExpirationDate { get; set; }
     }
 }

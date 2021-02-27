@@ -17,10 +17,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-namespace Microting.eFormInventoryBase
+
+namespace Microting.eFormInventoryBase.Infrastructure.Const
 {
-    public class DbConfig
+    public static class InventoryClaims
     {
-        public static bool IsMysql = false;
+        public const string AccessInventoryPlugin = "inventory_plugin_access";
+        
+        public const string CreateInventory = "inventory_create";
+        
+        public const string EditInventory = "inventory_edit";
+
+        public const string GetInventory = "inventory_get";
     }
 }

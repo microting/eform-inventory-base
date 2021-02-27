@@ -1,4 +1,4 @@
-/*
+﻿/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -17,10 +17,48 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-namespace Microting.eFormInventoryBase
+
+namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
-    public class DbConfig
+    using Const;
+    using System;
+
+    public class ItemTypeVersion: PnBase
     {
-        public static bool IsMysql = false;
+        public int ItemTypeId { get; set; }
+
+        public string No { get; set; }
+
+        public string GtinEanUpc { get; set; }
+
+        public string Description { get; set; }
+
+        public int NetWeight { get; set; }
+
+        public int GrossWeight { get; set; }
+
+        public int UnitVolume { get; set; }
+
+        public CostingMethod CostingMethod { get; set; }
+
+        public int UnitPrice { get; set; }
+
+        public int ProofitProcent { get; set; }
+
+        public UnitOfMeasure SalesUnitOfMeasure { get; set; }
+
+        public DateTime LastPhysicalInventoryDate { get; set; }
+
+        public int Region { get; set; }
+
+        public int ItemGroupId { get; set; }
+
+        public string Usage { get; set; }
+
+        public string RiscDescription { get; set; }
+
+        public bool Aviable { get; set; }
+
+        public string Name { get; set; }
     }
 }
