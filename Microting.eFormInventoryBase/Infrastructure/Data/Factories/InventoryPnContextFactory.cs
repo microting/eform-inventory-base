@@ -30,7 +30,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Factories
     {
         public InventoryPnDbContext CreateDbContext(string[] args)
         {
-            const string defaultCs = "Server = localhost; port = 3306; Database = inventory-pn; user = root; password = Qq1234567$;Convert Zero Datetime = true;";
+            const string defaultCs = "Server = localhost; port = 3306; Database = inventory-pn; user = root; password = secretpassword;Convert Zero Datetime = true;";
             var optionsBuilder = new DbContextOptionsBuilder<InventoryPnDbContext>();
 
             optionsBuilder.UseMySql(args.Any() ? args[0] : defaultCs, mysqlOptions =>
