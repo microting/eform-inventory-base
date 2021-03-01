@@ -26,7 +26,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public int ItemTypeId { get; set; }
 
-        public int ItemGroupId { get; set; }
+        public int DependItemTypeId { get; set; }
 
     }
 }

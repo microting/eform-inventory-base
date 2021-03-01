@@ -1,4 +1,4 @@
-﻿/*
+/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,5 +33,9 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public int? CustomerId { get; set; }
 
         public DateTime ExpirationDate { get; set; }
+
+        public string SN { get; set; }
+
+        public bool Aviable { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿/*
+/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,6 +33,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
         {
         }
 
+
         // Tables
         public DbSet<Item> Items { get; set; }
 
@@ -47,6 +48,8 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
         public DbSet<ItemTypeUploadedData> ItemTypeUploadedDatas { get; set; }
 
         public DbSet<InventoryTag> InventoryTags { get; set; }
+
+        public DbSet<ItemGroupDependency> ItemGroupDependencys { get; set; }
 
 
         // Version tables
@@ -63,7 +66,9 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
         public DbSet<ItemTypeUploadedDataVersion> ItemTypeUploadedDataVersions { get; set; }
 
         public DbSet<InventoryTagVersion> InventoryTagVersions { get; set; }
-        
+
+        public DbSet<ItemGroupDependencyVersion> ItemGroupDependencyVersions { get; set; }
+
 
         // Common tables
         public DbSet<PluginConfigurationValue> PluginConfigurationValues { get; set; }
@@ -81,11 +86,17 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.Entity<PluginGroupPermissionVersion>()
-            //    .HasOne<PluginGroupPermission>(x => x.PluginGroupPermissionId)
-            //    .WithMany()
-            //    .HasForeignKey("FK_PluginGroupPermissionVersions_PluginGroupPermissionId")
-            //    .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<ItemTypeDependency>()
+                .HasOne(x => x.DependItemType)
+                .WithMany()
+                .HasForeignKey(x => x.DependItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ItemTypeDependency>()
+                .HasOne(x => x.ItemType)
+                .WithMany()
+                .HasForeignKey(x => x.ItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
     }

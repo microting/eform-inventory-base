@@ -60,5 +60,10 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public bool Aviable { get; set; }
 
         public string Name { get; set; }
+
+        public int EformId { get; set; }
+
+        public string Comment { get; set; }
+
     }
 }

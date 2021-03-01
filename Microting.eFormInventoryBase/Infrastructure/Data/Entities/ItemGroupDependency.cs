@@ -20,14 +20,14 @@ SOFTWARE.
 
 namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
-    public class ItemTypeDependency: PnBase
+    public class ItemGroupDependency: PnBase
     {
         public int ItemTypeId { get; set; }
 
         public ItemType ItemType { get; set; }
 
-        public int DependItemTypeId { get; set; }
+        public int ItemGroupId { get; set; }
 
-        public virtual ItemType DependItemType { get; set; }
+        public ItemGroup ItemGroup { get; set; }
     }
 }

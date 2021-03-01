@@ -62,6 +62,10 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public string Name { get; set; }
 
+        public int EformId { get; set; }
+
+        public string Comment { get; set; }
+
         public virtual List<InventoryTag> InventoryTags { get; set; }
             = new List<InventoryTag>();
     }
