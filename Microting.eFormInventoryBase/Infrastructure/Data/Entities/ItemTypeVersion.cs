@@ -51,7 +51,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public int Region { get; set; }
 
-        public int ItemGroupId { get; set; }
+        public int? ItemGroupId { get; set; }
 
         public string Usage { get; set; }
 

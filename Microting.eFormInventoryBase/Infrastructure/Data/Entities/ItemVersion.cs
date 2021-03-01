@@ -26,11 +26,11 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
     {
         public int ItemId { get; set; }
 
-        public int ItemTypeId { get; set; }
+        public int? ItemTypeId { get; set; }
         
         public string Location { get; set; }
 
-        public int CustomerId { get; set; }
+        public int? CustomerId { get; set; }
 
         public DateTime ExpirationDate { get; set; }
     }

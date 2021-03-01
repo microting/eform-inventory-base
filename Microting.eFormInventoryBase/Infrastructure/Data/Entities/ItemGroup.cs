@@ -22,7 +22,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
     public class ItemGroup : PnBase
     {
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
 
         public virtual ItemGroup Parent { get; set; }
 

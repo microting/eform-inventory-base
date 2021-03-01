@@ -24,13 +24,13 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
     public class Item: PnBase
     {
-        public int ItemTypeId { get; set; }
+        public int? ItemTypeId { get; set; }
 
         public virtual ItemType ItemType { get; set; }
 
         public string Location { get; set; }
 
-        public int CustomerId { get; set; }
+        public int? CustomerId { get; set; }
 
         public DateTime ExpirationDate { get; set; }
     }

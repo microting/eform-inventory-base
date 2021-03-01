@@ -22,6 +22,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
     using Const;
     using System;
+    using System.Collections.Generic;
 
     public class ItemType : PnBase
     {
@@ -49,7 +50,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public int Region { get; set; }
 
-        public int ItemGroupId { get; set; }
+        public int? ItemGroupId { get; set; }
 
         public virtual ItemGroup ItemGroup { get; set; }
 
@@ -60,5 +61,8 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public bool Aviable { get; set; }
 
         public string Name { get; set; }
+
+        public virtual List<InventoryTag> InventoryTags { get; set; }
+            = new List<InventoryTag>();
     }
 }
