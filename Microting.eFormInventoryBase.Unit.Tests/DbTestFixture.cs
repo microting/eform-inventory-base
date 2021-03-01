@@ -50,7 +50,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
         {
 
             _connectionString =
-                $@"Server = localhost; port = 3306; Database = {NameDb}; user = root; password = Qq1234567$; Convert Zero Datetime = true;";
+                $@"Server = localhost; port = 3306; Database = {NameDb}; user = root; password = secretpassword; Convert Zero Datetime = true;";
 
             GetContext(_connectionString);
 
@@ -97,6 +97,8 @@ namespace Microting.eFormInventoryBase.Unit.Tests
                 "ItemTypeUploadedDataVersions",
                 "InventoryTags",
                 "InventoryTagVersions",
+                "ItemGroupDependencys",
+                "ItemGroupDependencyVersions",
             };
 
             foreach (var modelName in modelNames)
