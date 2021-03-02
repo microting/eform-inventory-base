@@ -33,17 +33,23 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public string Description { get; set; }
 
+        public string BaseUnitOfMeasure { get; set; }
+
         public int NetWeight { get; set; }
 
         public int GrossWeight { get; set; }
 
         public int UnitVolume { get; set; }
 
+        public int StandardCost { get; set; }
+
+        public int UnitCost { get; set; }
+
         public CostingMethod CostingMethod { get; set; }
 
         public int UnitPrice { get; set; }
 
-        public int ProofitProcent { get; set; }
+        public int ProfitPercent { get; set; }
 
         public UnitOfMeasure SalesUnitOfMeasure { get; set; }
 
@@ -56,9 +62,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public string Usage { get; set; }
 
         public string RiscDescription { get; set; }
-
-        public bool Aviable { get; set; }
-
+        
         public string Name { get; set; }
 
         public int EformId { get; set; }
