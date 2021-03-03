@@ -24,10 +24,10 @@ namespace Microting.eFormInventoryBase.Infrastructure.Const
     {
         public const string AccessInventoryPlugin = "inventory_plugin_access";
         
-        public const string CreateInventory = "inventory_create";
+        public const string CreateInventory = "inventory_item_create";
         
-        public const string EditInventory = "inventory_edit";
+        public const string EditInventory = "inventory_item_get";
 
-        public const string GetInventory = "inventory_get";
+        public const string GetInventory = "inventory_item_edit";
     }
 }
