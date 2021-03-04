@@ -51,7 +51,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
                 No = Guid.NewGuid().ToString(),
                 ProfitPercent = 1,
                 Region = 1,
-                RiscDescription = Guid.NewGuid().ToString(),
+                RiskDescription = Guid.NewGuid().ToString(),
                 SalesUnitOfMeasure = UnitOfMeasure.Liter,
                 StandardCost = 1,
                 Usage = Guid.NewGuid().ToString(),
@@ -121,7 +121,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
         }
 
         [Test]
-        public async Task InventoryTag_Update_DoesUpdate()
+        public async Task InventoryItem_Update_DoesUpdate()
         {
             // Arrange
             var itemType = new ItemType
@@ -140,7 +140,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
                 No = Guid.NewGuid().ToString(),
                 ProfitPercent = 1,
                 Region = 1,
-                RiscDescription = Guid.NewGuid().ToString(),
+                RiskDescription = Guid.NewGuid().ToString(),
                 SalesUnitOfMeasure = UnitOfMeasure.Liter,
                 StandardCost = 1,
                 Usage = Guid.NewGuid().ToString(),
@@ -229,7 +229,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
         }
 
         [Test]
-        public async Task InventoryTag_Delete_DoesDelete()
+        public async Task InventoryItem_Delete_DoesDelete()
         {
             // Arrange
             var itemType = new ItemType
@@ -248,7 +248,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
                 No = Guid.NewGuid().ToString(),
                 ProfitPercent = 1,
                 Region = 1,
-                RiscDescription = Guid.NewGuid().ToString(),
+                RiskDescription = Guid.NewGuid().ToString(),
                 SalesUnitOfMeasure = UnitOfMeasure.Liter,
                 StandardCost = 1,
                 Usage = Guid.NewGuid().ToString(),
