@@ -61,6 +61,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
             Assert.AreEqual(inventoryTag.Name, inventoryTagsList[0].Name);
             Assert.AreEqual(inventoryTag.Id, inventoryTagsList[0].Id);
             Assert.AreEqual(1, inventoryTagsList[0].Version);
+            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryTagsList[0].WorkflowState);
             Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagsList[0].WorkflowState);
 
 
@@ -69,7 +70,8 @@ namespace Microting.eFormInventoryBase.Unit.Tests
             Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsListVersions[0].CreatedByUserId);
             Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsListVersions[0].UpdatedByUserId);
             Assert.AreEqual(inventoryTag.Name, inventoryTagsListVersions[0].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[0].Id);
+            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[0].InventoryTagId);
+            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryTagsListVersions[0].WorkflowState);
             Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagsListVersions[0].WorkflowState);
             Assert.AreEqual(1, inventoryTagsListVersions[0].Version);
         }
@@ -90,7 +92,7 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
             var oldInventoryTagsList = DbContext.InventoryTags
                 .AsNoTracking()
-                .First(x => x.Id == inventoryTag.Id);
+                .First();
 
             inventoryTag.Name = Guid.NewGuid().ToString();
 
@@ -103,7 +105,6 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
             var inventoryTagsListVersions = DbContext.InventoryTagVersions
                 .AsNoTracking()
-                .Where(x => x.InventoryTagId == inventoryTag.Id)
                 .ToList();
 
 
@@ -150,11 +151,10 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
             var inventoryTagFromDb = DbContext.InventoryTags
                 .AsNoTracking()
-                .First(x => x.Id == inventoryTag.Id);
+                .First();
 
             var inventoryTagsListVersions = DbContext.InventoryTagVersions
                 .AsNoTracking()
-                .Where(x => x.InventoryTagId == inventoryTag.Id)
                 .ToList();
 
 
