@@ -554,7 +554,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("Region")
                         .HasColumnType("int");
 
-                    b.Property<string>("RiscDescription")
+                    b.Property<string>("RiskDescription")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("SalesUnitOfMeasure")
@@ -893,7 +893,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("Region")
                         .HasColumnType("int");
 
-                    b.Property<string>("RiscDescription")
+                    b.Property<string>("RiskDescription")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("SalesUnitOfMeasure")

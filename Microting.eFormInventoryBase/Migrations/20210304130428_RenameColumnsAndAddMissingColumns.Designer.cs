@@ -9,7 +9,7 @@ using Microting.eFormInventoryBase.Infrastructure.Data;
 namespace Microting.eFormInventoryBase.Migrations
 {
     [DbContext(typeof(InventoryPnDbContext))]
-    [Migration("20210302201914_RenameColumnsAndAddMissingColumns")]
+    [Migration("20210304130428_RenameColumnsAndAddMissingColumns")]
     partial class RenameColumnsAndAddMissingColumns
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -556,7 +556,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("Region")
                         .HasColumnType("int");
 
-                    b.Property<string>("RiscDescription")
+                    b.Property<string>("RiskDescription")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("SalesUnitOfMeasure")
@@ -895,7 +895,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("Region")
                         .HasColumnType("int");
 
-                    b.Property<string>("RiscDescription")
+                    b.Property<string>("RiskDescription")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("SalesUnitOfMeasure")
