@@ -41,11 +41,11 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
 
         public DbSet<ItemType> ItemTypes { get; set; }
 
-        public DbSet<ItemTypeDependency> ItemTypeDependencys { get; set; }
+        public DbSet<ItemTypeDependency> ItemTypeDependencies { get; set; }
 
         public DbSet<ItemTypeTag> ItemTypeTags { get; set; }
 
-        public DbSet<ItemTypeUploadedData> ItemTypeUploadedDatas { get; set; }
+        public DbSet<UploadedDataType> ItemTypeUploadedDatas { get; set; }
 
         public DbSet<InventoryTag> InventoryTags { get; set; }
 
@@ -59,11 +59,11 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
 
         public DbSet<ItemTypeVersion> ItemTypeVersions { get; set; }
 
-        public DbSet<ItemTypeDependencyVersion> ItemTypeDependencyVersions { get; set; }
+        public DbSet<ItemTypeDependencyVersion> ItemTypeDependencieVersions { get; set; }
 
         public DbSet<ItemTypeTagVersion> ItemTypeTagVersions { get; set; }
 
-        public DbSet<ItemTypeUploadedDataVersion> ItemTypeUploadedDataVersions { get; set; }
+        public DbSet<UploadedDataTypeVersion> ItemTypeUploadedDataVersions { get; set; }
 
         public DbSet<InventoryTagVersion> InventoryTagVersions { get; set; }
 
@@ -87,15 +87,35 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ItemTypeDependency>()
-                .HasOne(x => x.DependItemType)
-                .WithMany()
-                .HasForeignKey(x => x.DependItemTypeId)
+                .HasOne(x => x.ParentItemType)
+                .WithMany(x => x.DependItemTypes)
+                .HasForeignKey(x => x.ParentItemTypeId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<ItemTypeDependency>()
+                .HasOne(x => x.DependItemType)
+                .WithMany(x => x.ParentItemTypes)
+                .HasForeignKey(x => x.DependItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<UploadedDataType>()
                 .HasOne(x => x.ItemType)
-                .WithMany()
+                .WithMany(x => x.ItemTypeUploadedDatas)
                 .HasForeignKey(x => x.ItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            modelBuilder.Entity<ItemTypeTag>()
+                .HasOne(x => x.ItemType)
+                .WithMany(x => x.ItemTypeTags)
+                .HasForeignKey(x => x.ItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ItemTypeTag>()
+                .HasOne(x => x.InventoryTag)
+                .WithMany(x => x.ItemTypeTags)
+                .HasForeignKey(x => x.InventoryTagId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
 

@@ -9,7 +9,7 @@ using Microting.eFormInventoryBase.Infrastructure.Data;
 namespace Microting.eFormInventoryBase.Migrations
 {
     [DbContext(typeof(InventoryPnDbContext))]
-    [Migration("20210304130428_RenameColumnsAndAddMissingColumns")]
+    [Migration("20210311132327_RenameColumnsAndAddMissingColumns")]
     partial class RenameColumnsAndAddMissingColumns
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -222,9 +222,6 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("CreatedByUserId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ItemTypeId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
@@ -242,8 +239,6 @@ namespace Microting.eFormInventoryBase.Migrations
                         .HasMaxLength(255);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ItemTypeId");
 
                     b.ToTable("InventoryTags");
                 });
@@ -612,7 +607,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("DependItemTypeId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ItemTypeId")
+                    b.Property<int>("ParentItemTypeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -632,9 +627,9 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasIndex("DependItemTypeId");
 
-                    b.HasIndex("ItemTypeId");
+                    b.HasIndex("ParentItemTypeId");
 
-                    b.ToTable("ItemTypeDependencys");
+                    b.ToTable("ItemTypeDependencies");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeDependencyVersion", b =>
@@ -655,7 +650,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.Property<int>("ItemTypeDependencyId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ItemTypeId")
+                    b.Property<int>("ParentItemTypeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -673,7 +668,7 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ItemTypeDependencyVersions");
+                    b.ToTable("ItemTypeDependencieVersions");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeTag", b =>
@@ -753,89 +748,6 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ItemTypeTagVersions");
-                });
-
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeUploadedData", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("CreatedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FileName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<int>("ItemTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("UpdatedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Version")
-                        .HasColumnType("int");
-
-                    b.Property<string>("WorkflowState")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
-                        .HasMaxLength(255);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ItemTypeId");
-
-                    b.ToTable("ItemTypeUploadedDatas");
-                });
-
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeUploadedDataVersion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("CreatedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FileName")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
-
-                    b.Property<int>("ItemTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ItemTypeUploadedDataId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<int>("UpdatedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Version")
-                        .HasColumnType("int");
-
-                    b.Property<string>("WorkflowState")
-                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
-                        .HasMaxLength(255);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ItemTypeUploadedDataVersions");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeVersion", b =>
@@ -985,6 +897,89 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.ToTable("ItemVersions");
                 });
 
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.UploadedDataType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("ItemTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UpdatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Version")
+                        .HasColumnType("int");
+
+                    b.Property<string>("WorkflowState")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ItemTypeId");
+
+                    b.ToTable("ItemTypeUploadedDatas");
+                });
+
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.UploadedDataTypeVersion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<int>("ItemTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ItemTypeUploadedDataId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UpdatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Version")
+                        .HasColumnType("int");
+
+                    b.Property<string>("WorkflowState")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4")
+                        .HasMaxLength(255);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ItemTypeUploadedDataVersions");
+                });
+
             modelBuilder.Entity("Microting.eFormApi.BasePn.Infrastructure.Database.Entities.PluginGroupPermission", b =>
                 {
                     b.HasOne("Microting.eFormApi.BasePn.Infrastructure.Database.Entities.PluginPermission", "Permission")
@@ -992,13 +987,6 @@ namespace Microting.eFormInventoryBase.Migrations
                         .HasForeignKey("PermissionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.InventoryTag", b =>
-                {
-                    b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", null)
-                        .WithMany("InventoryTags")
-                        .HasForeignKey("ItemTypeId");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.Item", b =>
@@ -1040,14 +1028,14 @@ namespace Microting.eFormInventoryBase.Migrations
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeDependency", b =>
                 {
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "DependItemType")
-                        .WithMany()
+                        .WithMany("ParentItemTypes")
                         .HasForeignKey("DependItemTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ItemType")
-                        .WithMany()
-                        .HasForeignKey("ItemTypeId")
+                    b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ParentItemType")
+                        .WithMany("DependItemTypes")
+                        .HasForeignKey("ParentItemTypeId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
@@ -1055,24 +1043,24 @@ namespace Microting.eFormInventoryBase.Migrations
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeTag", b =>
                 {
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.InventoryTag", "InventoryTag")
-                        .WithMany()
+                        .WithMany("ItemTypeTags")
                         .HasForeignKey("InventoryTagId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ItemType")
-                        .WithMany()
+                        .WithMany("ItemTypeTags")
                         .HasForeignKey("ItemTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemTypeUploadedData", b =>
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.UploadedDataType", b =>
                 {
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ItemType")
-                        .WithMany()
+                        .WithMany("ItemTypeUploadedDatas")
                         .HasForeignKey("ItemTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

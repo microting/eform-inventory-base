@@ -70,7 +70,17 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 
         public string Comment { get; set; }
 
-        public virtual List<InventoryTag> InventoryTags { get; set; }
-            = new List<InventoryTag>();
+        public virtual List<ItemTypeTag> ItemTypeTags { get; set; }
+            = new List<ItemTypeTag>();
+
+        public virtual List<ItemTypeDependency> ParentItemTypes { get; set; }
+            = new List<ItemTypeDependency>();
+
+        public virtual List<ItemTypeDependency> DependItemTypes { get; set; }
+            = new List<ItemTypeDependency>();
+
+        public virtual List<UploadedDataType> ItemTypeUploadedDatas { get; set; }
+            = new List<UploadedDataType>();
+
     }
 }

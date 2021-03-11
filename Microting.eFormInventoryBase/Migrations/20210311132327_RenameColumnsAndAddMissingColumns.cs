@@ -28,8 +28,32 @@ namespace Microting.eFormInventoryBase.Migrations
                 name: "FK_ItemTypes_ItemGroups_ItemGroupId",
                 table: "ItemTypes");
 
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeTags_InventoryTags_InventoryTagId",
+                table: "ItemTypeTags");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeTags_ItemTypes_ItemTypeId",
+                table: "ItemTypeTags");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeUploadedDatas_ItemTypes_ItemTypeId",
+                table: "ItemTypeUploadedDatas");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ItemTypeDependencyVersions",
+                table: "ItemTypeDependencyVersions");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ItemTypeDependencys",
+                table: "ItemTypeDependencys");
+
             migrationBuilder.DropIndex(
                 name: "IX_ItemTypeDependencys_ItemGroupId",
+                table: "ItemTypeDependencys");
+
+            migrationBuilder.DropIndex(
+                name: "IX_ItemTypeDependencys_ItemTypeId",
                 table: "ItemTypeDependencys");
 
             migrationBuilder.DropColumn(
@@ -61,8 +85,24 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "ItemTypeDependencyVersions");
 
             migrationBuilder.DropColumn(
+                name: "ItemTypeId",
+                table: "ItemTypeDependencyVersions");
+
+            migrationBuilder.DropColumn(
                 name: "ItemGroupId",
                 table: "ItemTypeDependencys");
+
+            migrationBuilder.DropColumn(
+                name: "ItemTypeId",
+                table: "ItemTypeDependencys");
+
+            migrationBuilder.RenameTable(
+                name: "ItemTypeDependencyVersions",
+                newName: "ItemTypeDependencieVersions");
+
+            migrationBuilder.RenameTable(
+                name: "ItemTypeDependencys",
+                newName: "ItemTypeDependencies");
 
             migrationBuilder.AlterColumn<int>(
                 name: "ItemTypeId",
@@ -178,18 +218,6 @@ namespace Microting.eFormInventoryBase.Migrations
             migrationBuilder.AddColumn<int>(
                 name: "UnitCost",
                 table: "ItemTypes",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<int>(
-                name: "DependItemTypeId",
-                table: "ItemTypeDependencyVersions",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<int>(
-                name: "DependItemTypeId",
-                table: "ItemTypeDependencys",
                 nullable: false,
                 defaultValue: 0);
 
@@ -233,9 +261,38 @@ namespace Microting.eFormInventoryBase.Migrations
                 oldType: "int");
 
             migrationBuilder.AddColumn<int>(
-                name: "ItemTypeId",
-                table: "InventoryTags",
-                nullable: true);
+                name: "DependItemTypeId",
+                table: "ItemTypeDependencieVersions",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ParentItemTypeId",
+                table: "ItemTypeDependencieVersions",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "DependItemTypeId",
+                table: "ItemTypeDependencies",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ParentItemTypeId",
+                table: "ItemTypeDependencies",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ItemTypeDependencieVersions",
+                table: "ItemTypeDependencieVersions",
+                column: "Id");
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ItemTypeDependencies",
+                table: "ItemTypeDependencies",
+                column: "Id");
 
             migrationBuilder.CreateTable(
                 name: "ItemGroupDependencys",
@@ -291,14 +348,14 @@ namespace Microting.eFormInventoryBase.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ItemTypeDependencys_DependItemTypeId",
-                table: "ItemTypeDependencys",
+                name: "IX_ItemTypeDependencies_DependItemTypeId",
+                table: "ItemTypeDependencies",
                 column: "DependItemTypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InventoryTags_ItemTypeId",
-                table: "InventoryTags",
-                column: "ItemTypeId");
+                name: "IX_ItemTypeDependencies_ParentItemTypeId",
+                table: "ItemTypeDependencies",
+                column: "ParentItemTypeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ItemGroupDependencys_ItemGroupId",
@@ -309,14 +366,6 @@ namespace Microting.eFormInventoryBase.Migrations
                 name: "IX_ItemGroupDependencys_ItemTypeId",
                 table: "ItemGroupDependencys",
                 column: "ItemTypeId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_InventoryTags_ItemTypes_ItemTypeId",
-                table: "InventoryTags",
-                column: "ItemTypeId",
-                principalTable: "ItemTypes",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_ItemGroups_ItemGroups_ParentId",
@@ -335,17 +384,17 @@ namespace Microting.eFormInventoryBase.Migrations
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ItemTypeDependencys_ItemTypes_DependItemTypeId",
-                table: "ItemTypeDependencys",
+                name: "FK_ItemTypeDependencies_ItemTypes_DependItemTypeId",
+                table: "ItemTypeDependencies",
                 column: "DependItemTypeId",
                 principalTable: "ItemTypes",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_ItemTypeDependencys_ItemTypes_ItemTypeId",
-                table: "ItemTypeDependencys",
-                column: "ItemTypeId",
+                name: "FK_ItemTypeDependencies_ItemTypes_ParentItemTypeId",
+                table: "ItemTypeDependencies",
+                column: "ParentItemTypeId",
                 principalTable: "ItemTypes",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
@@ -357,14 +406,34 @@ namespace Microting.eFormInventoryBase.Migrations
                 principalTable: "ItemGroups",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeTags_InventoryTags_InventoryTagId",
+                table: "ItemTypeTags",
+                column: "InventoryTagId",
+                principalTable: "InventoryTags",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeTags_ItemTypes_ItemTypeId",
+                table: "ItemTypeTags",
+                column: "ItemTypeId",
+                principalTable: "ItemTypes",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeUploadedDatas_ItemTypes_ItemTypeId",
+                table: "ItemTypeUploadedDatas",
+                column: "ItemTypeId",
+                principalTable: "ItemTypes",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_InventoryTags_ItemTypes_ItemTypeId",
-                table: "InventoryTags");
-
             migrationBuilder.DropForeignKey(
                 name: "FK_ItemGroups_ItemGroups_ParentId",
                 table: "ItemGroups");
@@ -374,16 +443,28 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "Items");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_ItemTypeDependencys_ItemTypes_DependItemTypeId",
-                table: "ItemTypeDependencys");
+                name: "FK_ItemTypeDependencies_ItemTypes_DependItemTypeId",
+                table: "ItemTypeDependencies");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_ItemTypeDependencys_ItemTypes_ItemTypeId",
-                table: "ItemTypeDependencys");
+                name: "FK_ItemTypeDependencies_ItemTypes_ParentItemTypeId",
+                table: "ItemTypeDependencies");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_ItemTypes_ItemGroups_ItemGroupId",
                 table: "ItemTypes");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeTags_InventoryTags_InventoryTagId",
+                table: "ItemTypeTags");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeTags_ItemTypes_ItemTypeId",
+                table: "ItemTypeTags");
+
+            migrationBuilder.DropForeignKey(
+                name: "FK_ItemTypeUploadedDatas_ItemTypes_ItemTypeId",
+                table: "ItemTypeUploadedDatas");
 
             migrationBuilder.DropTable(
                 name: "ItemGroupDependencys");
@@ -391,13 +472,21 @@ namespace Microting.eFormInventoryBase.Migrations
             migrationBuilder.DropTable(
                 name: "ItemGroupDependencyVersions");
 
-            migrationBuilder.DropIndex(
-                name: "IX_ItemTypeDependencys_DependItemTypeId",
-                table: "ItemTypeDependencys");
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ItemTypeDependencieVersions",
+                table: "ItemTypeDependencieVersions");
+
+            migrationBuilder.DropPrimaryKey(
+                name: "PK_ItemTypeDependencies",
+                table: "ItemTypeDependencies");
 
             migrationBuilder.DropIndex(
-                name: "IX_InventoryTags_ItemTypeId",
-                table: "InventoryTags");
+                name: "IX_ItemTypeDependencies_DependItemTypeId",
+                table: "ItemTypeDependencies");
+
+            migrationBuilder.DropIndex(
+                name: "IX_ItemTypeDependencies_ParentItemTypeId",
+                table: "ItemTypeDependencies");
 
             migrationBuilder.DropColumn(
                 name: "Available",
@@ -464,14 +553,6 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "ItemTypes");
 
             migrationBuilder.DropColumn(
-                name: "DependItemTypeId",
-                table: "ItemTypeDependencyVersions");
-
-            migrationBuilder.DropColumn(
-                name: "DependItemTypeId",
-                table: "ItemTypeDependencys");
-
-            migrationBuilder.DropColumn(
                 name: "Available",
                 table: "Items");
 
@@ -480,8 +561,28 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "Items");
 
             migrationBuilder.DropColumn(
-                name: "ItemTypeId",
-                table: "InventoryTags");
+                name: "DependItemTypeId",
+                table: "ItemTypeDependencieVersions");
+
+            migrationBuilder.DropColumn(
+                name: "ParentItemTypeId",
+                table: "ItemTypeDependencieVersions");
+
+            migrationBuilder.DropColumn(
+                name: "DependItemTypeId",
+                table: "ItemTypeDependencies");
+
+            migrationBuilder.DropColumn(
+                name: "ParentItemTypeId",
+                table: "ItemTypeDependencies");
+
+            migrationBuilder.RenameTable(
+                name: "ItemTypeDependencieVersions",
+                newName: "ItemTypeDependencyVersions");
+
+            migrationBuilder.RenameTable(
+                name: "ItemTypeDependencies",
+                newName: "ItemTypeDependencys");
 
             migrationBuilder.AlterColumn<int>(
                 name: "ItemTypeId",
@@ -554,20 +655,6 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "ItemTypes",
                 type: "longtext CHARACTER SET utf8mb4",
                 nullable: true);
-
-            migrationBuilder.AddColumn<int>(
-                name: "ItemGroupId",
-                table: "ItemTypeDependencyVersions",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<int>(
-                name: "ItemGroupId",
-                table: "ItemTypeDependencys",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
 
             migrationBuilder.AlterColumn<int>(
                 name: "ItemTypeId",
@@ -601,10 +688,53 @@ namespace Microting.eFormInventoryBase.Migrations
                 oldClrType: typeof(int),
                 oldNullable: true);
 
+            migrationBuilder.AddColumn<int>(
+                name: "ItemGroupId",
+                table: "ItemTypeDependencyVersions",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ItemTypeId",
+                table: "ItemTypeDependencyVersions",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ItemGroupId",
+                table: "ItemTypeDependencys",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ItemTypeId",
+                table: "ItemTypeDependencys",
+                type: "int",
+                nullable: false,
+                defaultValue: 0);
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ItemTypeDependencyVersions",
+                table: "ItemTypeDependencyVersions",
+                column: "Id");
+
+            migrationBuilder.AddPrimaryKey(
+                name: "PK_ItemTypeDependencys",
+                table: "ItemTypeDependencys",
+                column: "Id");
+
             migrationBuilder.CreateIndex(
                 name: "IX_ItemTypeDependencys_ItemGroupId",
                 table: "ItemTypeDependencys",
                 column: "ItemGroupId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ItemTypeDependencys_ItemTypeId",
+                table: "ItemTypeDependencys",
+                column: "ItemTypeId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_ItemGroups_ItemGroups_ParentId",
@@ -643,6 +773,30 @@ namespace Microting.eFormInventoryBase.Migrations
                 table: "ItemTypes",
                 column: "ItemGroupId",
                 principalTable: "ItemGroups",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeTags_InventoryTags_InventoryTagId",
+                table: "ItemTypeTags",
+                column: "InventoryTagId",
+                principalTable: "InventoryTags",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeTags_ItemTypes_ItemTypeId",
+                table: "ItemTypeTags",
+                column: "ItemTypeId",
+                principalTable: "ItemTypes",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_ItemTypeUploadedDatas_ItemTypes_ItemTypeId",
+                table: "ItemTypeUploadedDatas",
+                column: "ItemTypeId",
+                principalTable: "ItemTypes",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
         }
