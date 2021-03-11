@@ -22,14 +22,14 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
     using Const;
 
-    public class ItemTypeUploadedData: PnBase
+    public class UploadedDataTypeVersion: PnBase
     {
+        public int ItemTypeUploadedDataId { get; set; }
+
         public TypeUploadedData Type { get; set; }
 
         public string FileName { get; set; }
 
         public int ItemTypeId { get; set; }
-
-        public virtual ItemType ItemType { get; set; }
     }
 }

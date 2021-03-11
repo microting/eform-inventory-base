@@ -20,8 +20,13 @@ SOFTWARE.
 
 namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
+    using System.Collections.Generic;
+
     public class InventoryTag : PnBase
     {
         public string Name { get; set; }
+
+        public virtual List<ItemTypeTag> ItemTypeTags { get; set; }
+            = new List<ItemTypeTag>();
     }
 }

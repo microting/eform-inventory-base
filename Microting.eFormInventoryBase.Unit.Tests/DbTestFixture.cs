@@ -1,4 +1,4 @@
-﻿/*
+/*
 The MIT License (MIT)
 Copyright (c) 2007 - 2021 Microting A/S
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -85,12 +85,12 @@ namespace Microting.eFormInventoryBase.Unit.Tests
             {
                 "Items",
                 "ItemVersions",
-                "ItemGroups",
-                "ItemGroupVersions",
                 "ItemTypes",
                 "ItemTypeVersions",
-                "ItemTypeDependencys",
-                "ItemTypeDependencyVersions",
+                "ItemGroups",
+                "ItemGroupVersions",
+                "ItemTypeDependencies",
+                "ItemTypeDependenciesVersions",
                 "ItemTypeTags",
                 "ItemTypeTagVersions",
                 "ItemTypeUploadedDatas",

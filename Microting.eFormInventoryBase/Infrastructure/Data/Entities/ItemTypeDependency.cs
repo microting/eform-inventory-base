@@ -22,9 +22,9 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
     public class ItemTypeDependency: PnBase
     {
-        public int ItemTypeId { get; set; }
+        public int ParentItemTypeId { get; set; }
 
-        public ItemType ItemType { get; set; }
+        public virtual ItemType ParentItemType { get; set; }
 
         public int DependItemTypeId { get; set; }
 
