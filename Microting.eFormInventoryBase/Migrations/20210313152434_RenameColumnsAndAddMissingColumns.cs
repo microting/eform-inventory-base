@@ -317,13 +317,13 @@ namespace Microting.eFormInventoryBase.Migrations
                         column: x => x.ItemGroupId,
                         principalTable: "ItemGroups",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ItemGroupDependencys_ItemTypes_ItemTypeId",
                         column: x => x.ItemTypeId,
                         principalTable: "ItemTypes",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
