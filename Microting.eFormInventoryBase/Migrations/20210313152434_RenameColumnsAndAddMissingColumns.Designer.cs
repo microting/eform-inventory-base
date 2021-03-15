@@ -9,7 +9,7 @@ using Microting.eFormInventoryBase.Infrastructure.Data;
 namespace Microting.eFormInventoryBase.Migrations
 {
     [DbContext(typeof(InventoryPnDbContext))]
-    [Migration("20210311132327_RenameColumnsAndAddMissingColumns")]
+    [Migration("20210313152434_RenameColumnsAndAddMissingColumns")]
     partial class RenameColumnsAndAddMissingColumns
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1006,15 +1006,15 @@ namespace Microting.eFormInventoryBase.Migrations
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemGroupDependency", b =>
                 {
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemGroup", "ItemGroup")
-                        .WithMany()
+                        .WithMany("ItemGroupDependencies")
                         .HasForeignKey("ItemGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ItemType")
-                        .WithMany()
+                        .WithMany("ItemGroupDependencies")
                         .HasForeignKey("ItemTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

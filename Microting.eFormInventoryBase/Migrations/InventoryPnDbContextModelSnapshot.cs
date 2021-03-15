@@ -1004,15 +1004,15 @@ namespace Microting.eFormInventoryBase.Migrations
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemGroupDependency", b =>
                 {
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemGroup", "ItemGroup")
-                        .WithMany()
+                        .WithMany("ItemGroupDependencies")
                         .HasForeignKey("ItemGroupId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Microting.eFormInventoryBase.Infrastructure.Data.Entities.ItemType", "ItemType")
-                        .WithMany()
+                        .WithMany("ItemGroupDependencies")
                         .HasForeignKey("ItemTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

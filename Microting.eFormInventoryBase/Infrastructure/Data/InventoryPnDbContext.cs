@@ -117,6 +117,18 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
                 .WithMany(x => x.ItemTypeTags)
                 .HasForeignKey(x => x.InventoryTagId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ItemGroupDependency>()
+                .HasOne(x => x.ItemType)
+                .WithMany(x => x.ItemGroupDependencies)
+                .HasForeignKey(x => x.ItemTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<ItemGroupDependency>()
+                .HasOne(x => x.ItemGroup)
+                .WithMany(x => x.ItemGroupDependencies)
+                .HasForeignKey(x => x.ItemGroupId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
     }

@@ -20,6 +20,8 @@ SOFTWARE.
 
 namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
+    using System.Collections.Generic;
+
     public class ItemGroup : PnBase
     {
         public int? ParentId { get; set; }
@@ -31,5 +33,8 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public string Description { get; set; }
 
         public string Code { get; set; }
+
+        public virtual List<ItemGroupDependency> ItemGroupDependencies { get; set; }
+            = new List<ItemGroupDependency>();
     }
 }

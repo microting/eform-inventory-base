@@ -82,5 +82,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public virtual List<UploadedDataType> ItemTypeUploadedDatas { get; set; }
             = new List<UploadedDataType>();
 
+        public virtual List<ItemGroupDependency> ItemGroupDependencies { get; set; }
+            = new List<ItemGroupDependency>();
     }
 }
