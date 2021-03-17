@@ -1,5 +1,39 @@
 # Changelog
 
+## [v1.2.6](https://github.com/microting/eform-inventory-base/tree/v1.2.6) (2021-03-17)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.5...v1.2.6)
+
+**Implemented enhancements:**
+
+- Bump Microting.eFormApi.BasePn from 2.0.103 to 2.0.104 [\#70](https://github.com/microting/eform-inventory-base/issues/70)
+- Bump Microting.eForm from 4.4.8 to 4.4.9 [\#69](https://github.com/microting/eform-inventory-base/issues/69)
+
+## [v1.2.5](https://github.com/microting/eform-inventory-base/tree/v1.2.5) (2021-03-16)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.4...v1.2.5)
+
+**Implemented enhancements:**
+
+- Bump Microting.eFormApi.BasePn from 2.0.101 to 2.0.103 [\#68](https://github.com/microting/eform-inventory-base/issues/68)
+- Bump Microting.eForm from 4.4.6 to 4.4.8 [\#67](https://github.com/microting/eform-inventory-base/issues/67)
+
+## [v1.2.4](https://github.com/microting/eform-inventory-base/tree/v1.2.4) (2021-03-15)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.3...v1.2.4)
+
+**Merged pull requests:**
+
+- Add missing relationships [\#64](https://github.com/microting/eform-inventory-base/pull/64) ([sanioooook](https://github.com/sanioooook))
+
+## [v1.2.3](https://github.com/microting/eform-inventory-base/tree/v1.2.3) (2021-03-11)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.2...v1.2.3)
+
+**Merged pull requests:**
+
+- Optimization fields database [\#62](https://github.com/microting/eform-inventory-base/pull/62) ([sanioooook](https://github.com/sanioooook))
+
 ## [v1.2.2](https://github.com/microting/eform-inventory-base/tree/v1.2.2) (2021-03-11)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.1...v1.2.2)
