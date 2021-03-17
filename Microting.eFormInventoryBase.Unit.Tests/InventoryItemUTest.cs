@@ -107,8 +107,6 @@ namespace Microting.eFormInventoryBase.Unit.Tests
             Assert.AreEqual(1, itemVersions.Count);
             Assert.AreEqual(item.CreatedByUserId, itemVersions[0].CreatedByUserId);
             Assert.AreEqual(item.UpdatedByUserId, itemVersions[0].UpdatedByUserId);
-            Assert.AreEqual(item.CreatedByUserId, itemVersions[0].CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, itemVersions[0].UpdatedByUserId);
             Assert.AreEqual(item.Available, itemVersions[0].Available);
             Assert.AreEqual(item.ItemTypeId, itemVersions[0].ItemTypeId);
             Assert.AreEqual(item.CustomerId, itemVersions[0].CustomerId);
