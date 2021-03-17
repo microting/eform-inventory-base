@@ -20,8 +20,10 @@ SOFTWARE.
 
 namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
 {
-    public class AssingnedSite: PnBase
+    public class AssignedSiteVersion : PnBase
     {
+        public int AssignedSiteId { get; set; }
+
         public int SiteUid { get; set; }
     }
 }

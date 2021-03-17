@@ -208,7 +208,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.ToTable("PluginPermissions");
                 });
 
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssingnedSite", b =>
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssignedSite", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -238,16 +238,16 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AssingnedSites");
+                    b.ToTable("AssignedSites");
                 });
 
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssingnedSiteVersion", b =>
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssignedSiteVersion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("AssingnedSiteId")
+                    b.Property<int>("AssignedSiteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -274,7 +274,7 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AssingnedSiteVersions");
+                    b.ToTable("AssignedSiteVersions");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.InventoryTag", b =>

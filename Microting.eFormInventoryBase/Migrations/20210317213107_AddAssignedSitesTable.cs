@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Microting.eFormInventoryBase.Migrations
 {
-    public partial class AddAssinedSitesTable : Migration
+    public partial class AddAssignedSitesTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AssingnedSites",
+                name: "AssignedSites",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -24,11 +24,11 @@ namespace Microting.eFormInventoryBase.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AssingnedSites", x => x.Id);
+                    table.PrimaryKey("PK_AssignedSites", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "AssingnedSiteVersions",
+                name: "AssignedSiteVersions",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -39,22 +39,22 @@ namespace Microting.eFormInventoryBase.Migrations
                     CreatedByUserId = table.Column<int>(nullable: false),
                     UpdatedByUserId = table.Column<int>(nullable: false),
                     Version = table.Column<int>(nullable: false),
-                    AssingnedSiteId = table.Column<int>(nullable: false),
+                    AssignedSiteId = table.Column<int>(nullable: false),
                     SiteUid = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AssingnedSiteVersions", x => x.Id);
+                    table.PrimaryKey("PK_AssignedSiteVersions", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AssingnedSites");
+                name: "AssignedSites");
 
             migrationBuilder.DropTable(
-                name: "AssingnedSiteVersions");
+                name: "AssignedSiteVersions");
         }
     }
 }

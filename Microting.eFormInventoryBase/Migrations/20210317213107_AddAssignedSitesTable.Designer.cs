@@ -9,8 +9,8 @@ using Microting.eFormInventoryBase.Infrastructure.Data;
 namespace Microting.eFormInventoryBase.Migrations
 {
     [DbContext(typeof(InventoryPnDbContext))]
-    [Migration("20210317205823_AddAssinedSitesTable")]
-    partial class AddAssinedSitesTable
+    [Migration("20210317213107_AddAssignedSitesTable")]
+    partial class AddAssignedSitesTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -210,7 +210,7 @@ namespace Microting.eFormInventoryBase.Migrations
                     b.ToTable("PluginPermissions");
                 });
 
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssingnedSite", b =>
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssignedSite", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -240,16 +240,16 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AssingnedSites");
+                    b.ToTable("AssignedSites");
                 });
 
-            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssingnedSiteVersion", b =>
+            modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.AssignedSiteVersion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("AssingnedSiteId")
+                    b.Property<int>("AssignedSiteId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -276,7 +276,7 @@ namespace Microting.eFormInventoryBase.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AssingnedSiteVersions");
+                    b.ToTable("AssignedSiteVersions");
                 });
 
             modelBuilder.Entity("Microting.eFormInventoryBase.Infrastructure.Data.Entities.InventoryTag", b =>
