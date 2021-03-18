@@ -51,6 +51,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
 
         public DbSet<ItemGroupDependency> ItemGroupDependencys { get; set; }
 
+        public DbSet<AssignedSite> AssignedSites { get; set; }
 
         // Version tables
         public DbSet<ItemVersion> ItemVersions { get; set; }
@@ -69,6 +70,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data
 
         public DbSet<ItemGroupDependencyVersion> ItemGroupDependencyVersions { get; set; }
 
+        public DbSet<AssignedSiteVersion> AssignedSiteVersions { get; set; }
 
         // Common tables
         public DbSet<PluginConfigurationValue> PluginConfigurationValues { get; set; }
