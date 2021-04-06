@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.2.13](https://github.com/microting/eform-inventory-base/tree/v1.2.13) (2021-04-06)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.12...v1.2.13)
+
+**Implemented enhancements:**
+
+- Bump Microting.eForm from 4.4.19 to 4.4.20 [\#85](https://github.com/microting/eform-inventory-base/issues/85)
+
 ## [v1.2.12](https://github.com/microting/eform-inventory-base/tree/v1.2.12) (2021-04-05)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.11...v1.2.12)
