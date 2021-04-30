@@ -33,9 +33,10 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Factories
             const string defaultCs = "Server = localhost; port = 3306; Database = inventory-pn; user = root; password = secretpassword;Convert Zero Datetime = true;";
             var optionsBuilder = new DbContextOptionsBuilder<InventoryPnDbContext>();
 
-            optionsBuilder.UseMySql(args.Any() ? args[0] : defaultCs, mysqlOptions =>
+            optionsBuilder.UseMySql(args.Any() ? args[0] : defaultCs, new MariaDbServerVersion(
+                new Version(10, 4, 0)), mySqlOptionsAction: builder =>
             {
-                mysqlOptions.ServerVersion(new Version(10, 4, 0), ServerType.MariaDb);
+                builder.EnableRetryOnFailure();
             });
 
             return new InventoryPnDbContext(optionsBuilder.Options);
