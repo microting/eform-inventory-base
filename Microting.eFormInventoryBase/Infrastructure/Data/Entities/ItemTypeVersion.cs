@@ -27,6 +27,8 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
     {
         public int ItemTypeId { get; set; }
 
+        public string CreatedByName { get; set; }
+
         public string No { get; set; }
 
         public string GtinEanUpc { get; set; }
@@ -62,7 +64,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Entities
         public string Usage { get; set; }
 
         public string RiskDescription { get; set; }
-        
+
         public string Name { get; set; }
 
         public int EformId { get; set; }
