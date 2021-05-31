@@ -1,5 +1,13 @@
 # Changelog
 
+## [v2.0.13](https://github.com/microting/eform-inventory-base/tree/v2.0.13) (2021-05-31)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.12...v2.0.13)
+
+**Implemented enhancements:**
+
+- Bump Microting.eForm from 5.2.3 to 5.2.4 [\#157](https://github.com/microting/eform-inventory-base/issues/157)
+
 ## [v2.0.12](https://github.com/microting/eform-inventory-base/tree/v2.0.12) (2021-05-26)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.11...v2.0.12)
@@ -302,7 +310,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.104 to 2.0.106 [\#73](https://github.com/microting/eform-inventory-base/issues/73)
 - Bump Microting.eForm from 4.4.9 to 4.4.11 [\#72](https://github.com/microting/eform-inventory-base/issues/72)
 
 ## [v1.2.7](https://github.com/microting/eform-inventory-base/tree/v1.2.7) (2021-03-18)
@@ -353,6 +360,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eFormApi.BasePn from 2.0.104 to 2.0.106 [\#73](https://github.com/microting/eform-inventory-base/issues/73)
 - Bump Microting.eFormApi.BasePn from 2.0.99 to 2.0.101 [\#61](https://github.com/microting/eform-inventory-base/issues/61)
 - Bump Microting.eForm from 4.4.3 to 4.4.6 [\#60](https://github.com/microting/eform-inventory-base/issues/60)
 
@@ -368,10 +376,6 @@
 ## [v1.2.0](https://github.com/microting/eform-inventory-base/tree/v1.2.0) (2021-03-04)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.1.1...v1.2.0)
-
-**Merged pull requests:**
-
-- Add unit tests, rename some columns, merged migrations [\#52](https://github.com/microting/eform-inventory-base/pull/52) ([sanioooook](https://github.com/sanioooook))
 
 ## [v1.1.1](https://github.com/microting/eform-inventory-base/tree/v1.1.1) (2021-03-02)
 
@@ -437,6 +441,7 @@
 
 **Merged pull requests:**
 
+- Add unit tests, rename some columns, merged migrations [\#52](https://github.com/microting/eform-inventory-base/pull/52) ([sanioooook](https://github.com/sanioooook))
 - Bump NUnit from 3.12.0 to 3.13.1 [\#32](https://github.com/microting/eform-inventory-base/pull/32) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump NUnit3TestAdapter from 3.16.1 to 3.17.0 [\#6](https://github.com/microting/eform-inventory-base/pull/6) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
