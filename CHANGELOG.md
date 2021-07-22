@@ -1,5 +1,24 @@
 # Changelog
 
+## [v2.0.30](https://github.com/microting/eform-inventory-base/tree/v2.0.30) (2021-07-22)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.29...v2.0.30)
+
+**Implemented enhancements:**
+
+- Bump Microting.eFormApi.BasePn from 3.0.30 to 3.0.31 [\#197](https://github.com/microting/eform-inventory-base/issues/197)
+- Bump Microting.eForm from 5.2.17 to 5.2.18 [\#196](https://github.com/microting/eform-inventory-base/issues/196)
+
+## [v2.0.29](https://github.com/microting/eform-inventory-base/tree/v2.0.29) (2021-07-15)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.28...v2.0.29)
+
+**Implemented enhancements:**
+
+- Bump Microsoft.EntityFrameworkCore.Design from 5.0.7 to 5.0.8 [\#193](https://github.com/microting/eform-inventory-base/issues/193)
+- Bump Microting.eFormApi.BasePn from 3.0.28 to 3.0.30 [\#192](https://github.com/microting/eform-inventory-base/issues/192)
+- Bump Microting.eForm from 5.2.15 to 5.2.17 [\#191](https://github.com/microting/eform-inventory-base/issues/191)
+
 ## [v2.0.28](https://github.com/microting/eform-inventory-base/tree/v2.0.28) (2021-07-08)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.27...v2.0.28)
@@ -223,6 +242,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eFormApi.BasePn from 3.0.4 to 3.0.5 [\#134](https://github.com/microting/eform-inventory-base/issues/134)
 - Bump Microting.eForm from 5.1.0 to 5.1.1 [\#133](https://github.com/microting/eform-inventory-base/issues/133)
 
 ## [v2.0.3](https://github.com/microting/eform-inventory-base/tree/v2.0.3) (2021-05-04)
@@ -240,7 +260,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 3.0.4 to 3.0.5 [\#134](https://github.com/microting/eform-inventory-base/issues/134)
 - Bump Microting.eFormApi.BasePn from 3.0.1 to 3.0.3 [\#128](https://github.com/microting/eform-inventory-base/issues/128)
 - Bump Microting.eForm from 5.0.2 to 5.0.4 [\#127](https://github.com/microting/eform-inventory-base/issues/127)
 
