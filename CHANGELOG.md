@@ -1,5 +1,27 @@
 # Changelog
 
+## [v2.0.50](https://github.com/microting/eform-inventory-base/tree/v2.0.50) (2021-10-06)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.49...v2.0.50)
+
+**Implemented enhancements:**
+
+- Bump Pomelo.EntityFrameworkCore.MySql from 5.0.1 to 5.0.2 [\#237](https://github.com/microting/eform-inventory-base/issues/237)
+- Bump Microting.eFormApi.BasePn from 3.0.54 to 3.0.55 [\#236](https://github.com/microting/eform-inventory-base/issues/236)
+- Bump Microting.eForm from 5.2.45 to 5.2.46 [\#235](https://github.com/microting/eform-inventory-base/issues/235)
+
+## [v2.0.49](https://github.com/microting/eform-inventory-base/tree/v2.0.49) (2021-10-01)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.48...v2.0.49)
+
+## [v2.0.48](https://github.com/microting/eform-inventory-base/tree/v2.0.48) (2021-09-29)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.47...v2.0.48)
+
+## [v2.0.47](https://github.com/microting/eform-inventory-base/tree/v2.0.47) (2021-09-28)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.46...v2.0.47)
+
 ## [v2.0.46](https://github.com/microting/eform-inventory-base/tree/v2.0.46) (2021-09-25)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.45...v2.0.46)
@@ -562,6 +584,10 @@
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.12...v1.2.13)
 
+**Implemented enhancements:**
+
+- Bump Microting.eForm from 4.4.19 to 4.4.20 [\#85](https://github.com/microting/eform-inventory-base/issues/85)
+
 ## [v1.2.12](https://github.com/microting/eform-inventory-base/tree/v1.2.12) (2021-04-05)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.11...v1.2.12)
@@ -577,7 +603,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.4.19 to 4.4.20 [\#85](https://github.com/microting/eform-inventory-base/issues/85)
 - Bump Microting.eFormApi.BasePn from 2.0.109 to 2.0.110 [\#82](https://github.com/microting/eform-inventory-base/issues/82)
 - Bump Microting.eForm from 4.4.16 to 4.4.17 [\#81](https://github.com/microting/eform-inventory-base/issues/81)
 
@@ -588,6 +613,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.107 to 2.0.109 [\#80](https://github.com/microting/eform-inventory-base/issues/80)
+- Bump Microting.eForm from 4.4.13 to 4.4.16 [\#79](https://github.com/microting/eform-inventory-base/issues/79)
 
 ## [v1.2.9](https://github.com/microting/eform-inventory-base/tree/v1.2.9) (2021-03-29)
 
@@ -623,7 +649,6 @@
 
 - Bump Microting.eFormApi.BasePn from 2.0.103 to 2.0.104 [\#70](https://github.com/microting/eform-inventory-base/issues/70)
 - Bump Microting.eForm from 4.4.8 to 4.4.9 [\#69](https://github.com/microting/eform-inventory-base/issues/69)
-- Bump Microting.eForm from 4.4.6 to 4.4.8 [\#67](https://github.com/microting/eform-inventory-base/issues/67)
 
 ## [v1.2.5](https://github.com/microting/eform-inventory-base/tree/v1.2.5) (2021-03-16)
 
@@ -631,8 +656,9 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.4.13 to 4.4.16 [\#79](https://github.com/microting/eform-inventory-base/issues/79)
 - Bump Microting.eFormApi.BasePn from 2.0.101 to 2.0.103 [\#68](https://github.com/microting/eform-inventory-base/issues/68)
+- Bump Microting.eForm from 4.4.6 to 4.4.8 [\#67](https://github.com/microting/eform-inventory-base/issues/67)
+- Bump Microting.eFormApi.BasePn from 2.0.98 to 2.0.99 [\#54](https://github.com/microting/eform-inventory-base/issues/54)
 
 ## [v1.2.4](https://github.com/microting/eform-inventory-base/tree/v1.2.4) (2021-03-15)
 
@@ -665,7 +691,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.98 to 2.0.99 [\#54](https://github.com/microting/eform-inventory-base/issues/54)
 - Bump Microting.eForm from 4.4.2 to 4.4.3 [\#53](https://github.com/microting/eform-inventory-base/issues/53)
 
 ## [v1.2.0](https://github.com/microting/eform-inventory-base/tree/v1.2.0) (2021-03-04)
