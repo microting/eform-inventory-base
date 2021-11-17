@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.0.63](https://github.com/microting/eform-inventory-base/tree/v2.0.63) (2021-11-17)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.62...v2.0.63)
+
+**Implemented enhancements:**
+
+- Bump Microting.eFormApi.BasePn from 3.1.1 to 3.1.2 [\#263](https://github.com/microting/eform-inventory-base/issues/263)
+- Bump Microting.eForm from 5.3.2 to 5.3.4 [\#262](https://github.com/microting/eform-inventory-base/issues/262)
+
 ## [v2.0.62](https://github.com/microting/eform-inventory-base/tree/v2.0.62) (2021-11-16)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.61...v2.0.62)
@@ -63,7 +72,6 @@
 
 - Bump Microting.eFormApi.BasePn from 3.0.60 to 3.0.61 [\#243](https://github.com/microting/eform-inventory-base/issues/243)
 - Bump Microting.eForm from 5.2.51 to 5.2.53 [\#242](https://github.com/microting/eform-inventory-base/issues/242)
-- Bump Pomelo.EntityFrameworkCore.MySql from 5.0.1 to 5.0.2 [\#237](https://github.com/microting/eform-inventory-base/issues/237)
 
 ## [v2.0.55](https://github.com/microting/eform-inventory-base/tree/v2.0.55) (2021-10-14)
 
@@ -101,6 +109,7 @@
 
 **Implemented enhancements:**
 
+- Bump Pomelo.EntityFrameworkCore.MySql from 5.0.1 to 5.0.2 [\#237](https://github.com/microting/eform-inventory-base/issues/237)
 - Bump Microting.eFormApi.BasePn from 3.0.54 to 3.0.55 [\#236](https://github.com/microting/eform-inventory-base/issues/236)
 - Bump Microting.eForm from 5.2.45 to 5.2.46 [\#235](https://github.com/microting/eform-inventory-base/issues/235)
 
@@ -335,7 +344,6 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 3.0.22 to 3.0.23 [\#178](https://github.com/microting/eform-inventory-base/issues/178)
-- Bump Microting.eForm from 5.2.11 to 5.2.12 [\#177](https://github.com/microting/eform-inventory-base/issues/177)
 
 ## [v2.0.22](https://github.com/microting/eform-inventory-base/tree/v2.0.22) (2021-06-16)
 
@@ -370,6 +378,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eForm from 5.2.11 to 5.2.12 [\#177](https://github.com/microting/eform-inventory-base/issues/177)
 - Bump Microting.eFormApi.BasePn from 3.0.18 to 3.0.19 [\#167](https://github.com/microting/eform-inventory-base/issues/167)
 
 ## [v2.0.18](https://github.com/microting/eform-inventory-base/tree/v2.0.18) (2021-06-04)
@@ -395,9 +404,7 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 3.0.14 to 3.0.16 [\#162](https://github.com/microting/eform-inventory-base/issues/162)
 - Bump Microting.eForm from 5.2.5 to 5.2.7 [\#161](https://github.com/microting/eform-inventory-base/issues/161)
-- Bump Microting.eFormApi.BasePn from 3.0.9 to 3.0.10 [\#147](https://github.com/microting/eform-inventory-base/issues/147)
 
 ## [v2.0.15](https://github.com/microting/eform-inventory-base/tree/v2.0.15) (2021-05-31)
 
@@ -421,6 +428,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eFormApi.BasePn from 3.0.14 to 3.0.16 [\#162](https://github.com/microting/eform-inventory-base/issues/162)
 - Bump Microting.eForm from 5.2.3 to 5.2.4 [\#157](https://github.com/microting/eform-inventory-base/issues/157)
 
 ## [v2.0.12](https://github.com/microting/eform-inventory-base/tree/v2.0.12) (2021-05-26)
@@ -436,6 +444,7 @@
 
 - Upgrade to GitHub-native Dependabot [\#121](https://github.com/microting/eform-inventory-base/pull/121) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump NUnit from 3.13.1 to 3.13.2 [\#119](https://github.com/microting/eform-inventory-base/pull/119) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Bump Microsoft.NET.Test.Sdk from 16.9.1 to 16.9.4 [\#77](https://github.com/microting/eform-inventory-base/pull/77) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v2.0.11](https://github.com/microting/eform-inventory-base/tree/v2.0.11) (2021-05-19)
 
@@ -453,8 +462,8 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eFormApi.BasePn from 3.0.9 to 3.0.10 [\#147](https://github.com/microting/eform-inventory-base/issues/147)
 - Bump Microting.eForm from 5.1.5 to 5.2.0 [\#146](https://github.com/microting/eform-inventory-base/issues/146)
-- Bump Microting.eFormApi.BasePn from 3.0.5 to 3.0.6 [\#136](https://github.com/microting/eform-inventory-base/issues/136)
 
 ## [v2.0.9](https://github.com/microting/eform-inventory-base/tree/v2.0.9) (2021-05-11)
 
@@ -485,7 +494,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 3.0.6 to 3.0.7 [\#138](https://github.com/microting/eform-inventory-base/issues/138)
-- Bump Microting.eFormApi.BasePn from 3.0.4 to 3.0.5 [\#134](https://github.com/microting/eform-inventory-base/issues/134)
+- Bump Microting.eForm from 5.1.2 to 5.1.3 [\#137](https://github.com/microting/eform-inventory-base/issues/137)
 
 ## [v2.0.5](https://github.com/microting/eform-inventory-base/tree/v2.0.5) (2021-05-05)
 
@@ -493,7 +502,7 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 5.1.2 to 5.1.3 [\#137](https://github.com/microting/eform-inventory-base/issues/137)
+- Bump Microting.eFormApi.BasePn from 3.0.5 to 3.0.6 [\#136](https://github.com/microting/eform-inventory-base/issues/136)
 - Bump Microting.eForm from 5.1.1 to 5.1.2 [\#135](https://github.com/microting/eform-inventory-base/issues/135)
 
 ## [v2.0.4](https://github.com/microting/eform-inventory-base/tree/v2.0.4) (2021-05-04)
@@ -502,6 +511,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eFormApi.BasePn from 3.0.4 to 3.0.5 [\#134](https://github.com/microting/eform-inventory-base/issues/134)
 - Bump Microting.eForm from 5.1.0 to 5.1.1 [\#133](https://github.com/microting/eform-inventory-base/issues/133)
 
 ## [v2.0.3](https://github.com/microting/eform-inventory-base/tree/v2.0.3) (2021-05-04)
@@ -581,7 +591,6 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.128 to 2.0.129 [\#110](https://github.com/microting/eform-inventory-base/issues/110)
-- Bump Microting.eForm from 4.4.37 to 4.4.38 [\#109](https://github.com/microting/eform-inventory-base/issues/109)
 
 ## [v1.2.23](https://github.com/microting/eform-inventory-base/tree/v1.2.23) (2021-04-19)
 
@@ -589,6 +598,7 @@
 
 **Implemented enhancements:**
 
+- Bump Microting.eForm from 4.4.37 to 4.4.38 [\#109](https://github.com/microting/eform-inventory-base/issues/109)
 - Bump Microting.eFormApi.BasePn from 2.0.127 to 2.0.128 [\#108](https://github.com/microting/eform-inventory-base/issues/108)
 - Bump Microting.eForm from 4.4.36 to 4.4.37 [\#107](https://github.com/microting/eform-inventory-base/issues/107)
 
@@ -608,6 +618,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.122 to 2.0.126 [\#104](https://github.com/microting/eform-inventory-base/issues/104)
+- Bump Microting.eForm from 4.4.31 to 4.4.35 [\#103](https://github.com/microting/eform-inventory-base/issues/103)
 
 ## [v1.2.20](https://github.com/microting/eform-inventory-base/tree/v1.2.20) (2021-04-14)
 
@@ -615,7 +626,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.4.31 to 4.4.35 [\#103](https://github.com/microting/eform-inventory-base/issues/103)
 - Bump Microting.eFormApi.BasePn from 2.0.120 to 2.0.122 [\#102](https://github.com/microting/eform-inventory-base/issues/102)
 - Bump Microting.eForm from 4.4.29 to 4.4.31 [\#101](https://github.com/microting/eform-inventory-base/issues/101)
 
@@ -654,6 +664,7 @@
 
 - Bump Microting.eFormApi.BasePn from 2.0.115 to 2.0.116 [\#94](https://github.com/microting/eform-inventory-base/issues/94)
 - Bump Microting.eForm from 4.4.23 to 4.4.24 [\#93](https://github.com/microting/eform-inventory-base/issues/93)
+- Bump Microting.eFormApi.BasePn from 2.0.111 to 2.0.113 [\#89](https://github.com/microting/eform-inventory-base/issues/89)
 
 ## [v1.2.15](https://github.com/microting/eform-inventory-base/tree/v1.2.15) (2021-04-08)
 
@@ -670,7 +681,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.111 to 2.0.113 [\#89](https://github.com/microting/eform-inventory-base/issues/89)
 - Bump Microting.eForm from 4.4.20 to 4.4.21 [\#88](https://github.com/microting/eform-inventory-base/issues/88)
 
 ## [v1.2.13](https://github.com/microting/eform-inventory-base/tree/v1.2.13) (2021-04-06)
@@ -697,6 +707,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.109 to 2.0.110 [\#82](https://github.com/microting/eform-inventory-base/issues/82)
+- Bump Microting.eForm from 4.4.16 to 4.4.17 [\#81](https://github.com/microting/eform-inventory-base/issues/81)
 
 ## [v1.2.10](https://github.com/microting/eform-inventory-base/tree/v1.2.10) (2021-04-02)
 
@@ -722,7 +733,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.4.16 to 4.4.17 [\#81](https://github.com/microting/eform-inventory-base/issues/81)
 - Bump Microting.eFormApi.BasePn from 2.0.104 to 2.0.106 [\#73](https://github.com/microting/eform-inventory-base/issues/73)
 - Bump Microting.eForm from 4.4.9 to 4.4.11 [\#72](https://github.com/microting/eform-inventory-base/issues/72)
 
@@ -732,7 +742,7 @@
 
 **Merged pull requests:**
 
-- Bump Microsoft.NET.Test.Sdk from 16.9.1 to 16.9.4 [\#77](https://github.com/microting/eform-inventory-base/pull/77) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
+- Add unit tests for item group, add table for assigned sites [\#71](https://github.com/microting/eform-inventory-base/pull/71) ([sanioooook](https://github.com/sanioooook))
 
 ## [v1.2.6](https://github.com/microting/eform-inventory-base/tree/v1.2.6) (2021-03-17)
 
@@ -750,6 +760,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.101 to 2.0.103 [\#68](https://github.com/microting/eform-inventory-base/issues/68)
+- Bump Microting.eForm from 4.4.6 to 4.4.8 [\#67](https://github.com/microting/eform-inventory-base/issues/67)
 
 ## [v1.2.4](https://github.com/microting/eform-inventory-base/tree/v1.2.4) (2021-03-15)
 
@@ -799,7 +810,6 @@
 
 **Merged pull requests:**
 
-- Add unit tests for item group, add table for assigned sites [\#71](https://github.com/microting/eform-inventory-base/pull/71) ([sanioooook](https://github.com/sanioooook))
 - Rename columns  and add missing columns [\#51](https://github.com/microting/eform-inventory-base/pull/51) ([sanioooook](https://github.com/sanioooook))
 
 ## [v1.1.0](https://github.com/microting/eform-inventory-base/tree/v1.1.0) (2021-03-01)
@@ -817,7 +827,6 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.4.6 to 4.4.8 [\#67](https://github.com/microting/eform-inventory-base/issues/67)
 - Bump Microting.eFormApi.BasePn from 2.0.96 to 2.0.98 [\#49](https://github.com/microting/eform-inventory-base/issues/49)
 - Bump Microting.eForm from 4.3.18 to 4.4.2 [\#48](https://github.com/microting/eform-inventory-base/issues/48)
 
