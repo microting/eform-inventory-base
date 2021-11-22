@@ -1,5 +1,14 @@
 # Changelog
 
+## [v2.0.65](https://github.com/microting/eform-inventory-base/tree/v2.0.65) (2021-11-22)
+
+[Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.64...v2.0.65)
+
+**Implemented enhancements:**
+
+- Bump Microting.eFormApi.BasePn from 3.1.4 to 3.1.6 [\#267](https://github.com/microting/eform-inventory-base/issues/267)
+- Bump Microting.eForm from 5.3.6 to 5.3.7 [\#266](https://github.com/microting/eform-inventory-base/issues/266)
+
 ## [v2.0.64](https://github.com/microting/eform-inventory-base/tree/v2.0.64) (2021-11-19)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v2.0.63...v2.0.64)
@@ -319,6 +328,7 @@
 
 - Bump NUnit3TestAdapter from 3.17.0 to 4.0.0 [\#168](https://github.com/microting/eform-inventory-base/pull/168) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump Microsoft.NET.Test.Sdk from 16.9.4 to 16.10.0 [\#154](https://github.com/microting/eform-inventory-base/pull/154) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Upgrade to GitHub-native Dependabot [\#121](https://github.com/microting/eform-inventory-base/pull/121) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
 ## [v2.0.26](https://github.com/microting/eform-inventory-base/tree/v2.0.26) (2021-07-05)
 
@@ -451,7 +461,6 @@
 
 **Merged pull requests:**
 
-- Upgrade to GitHub-native Dependabot [\#121](https://github.com/microting/eform-inventory-base/pull/121) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump NUnit from 3.13.1 to 3.13.2 [\#119](https://github.com/microting/eform-inventory-base/pull/119) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump Microsoft.NET.Test.Sdk from 16.9.1 to 16.9.4 [\#77](https://github.com/microting/eform-inventory-base/pull/77) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
@@ -690,7 +699,7 @@
 **Implemented enhancements:**
 
 - Bump Microting.eFormApi.BasePn from 2.0.111 to 2.0.113 [\#89](https://github.com/microting/eform-inventory-base/issues/89)
-- Bump Microting.eForm from 4.4.20 to 4.4.21 [\#88](https://github.com/microting/eform-inventory-base/issues/88)
+- Bump Microting.eFormApi.BasePn from 2.0.107 to 2.0.109 [\#80](https://github.com/microting/eform-inventory-base/issues/80)
 
 ## [v1.2.13](https://github.com/microting/eform-inventory-base/tree/v1.2.13) (2021-04-06)
 
@@ -724,7 +733,7 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.107 to 2.0.109 [\#80](https://github.com/microting/eform-inventory-base/issues/80)
+- Bump Microting.eForm from 4.4.20 to 4.4.21 [\#88](https://github.com/microting/eform-inventory-base/issues/88)
 - Bump Microting.eForm from 4.4.13 to 4.4.16 [\#79](https://github.com/microting/eform-inventory-base/issues/79)
 
 ## [v1.2.9](https://github.com/microting/eform-inventory-base/tree/v1.2.9) (2021-03-29)
@@ -744,6 +753,7 @@
 
 - Bump Microting.eFormApi.BasePn from 2.0.104 to 2.0.106 [\#73](https://github.com/microting/eform-inventory-base/issues/73)
 - Bump Microting.eForm from 4.4.9 to 4.4.11 [\#72](https://github.com/microting/eform-inventory-base/issues/72)
+- Bump Microting.eFormApi.BasePn from 2.0.99 to 2.0.101 [\#61](https://github.com/microting/eform-inventory-base/issues/61)
 
 ## [v1.2.7](https://github.com/microting/eform-inventory-base/tree/v1.2.7) (2021-03-18)
 
@@ -783,17 +793,12 @@
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.2...v1.2.3)
 
-**Merged pull requests:**
-
-- Optimization fields database [\#62](https://github.com/microting/eform-inventory-base/pull/62) ([sanioooook](https://github.com/sanioooook))
-
 ## [v1.2.2](https://github.com/microting/eform-inventory-base/tree/v1.2.2) (2021-03-11)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.2.1...v1.2.2)
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.99 to 2.0.101 [\#61](https://github.com/microting/eform-inventory-base/issues/61)
 - Bump Microting.eForm from 4.4.3 to 4.4.6 [\#60](https://github.com/microting/eform-inventory-base/issues/60)
 
 ## [v1.2.1](https://github.com/microting/eform-inventory-base/tree/v1.2.1) (2021-03-05)
@@ -817,17 +822,13 @@
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.1.0...v1.1.1)
 
-**Merged pull requests:**
-
-- Rename columns  and add missing columns [\#51](https://github.com/microting/eform-inventory-base/pull/51) ([sanioooook](https://github.com/sanioooook))
-
 ## [v1.1.0](https://github.com/microting/eform-inventory-base/tree/v1.1.0) (2021-03-01)
 
 [Full Changelog](https://github.com/microting/eform-inventory-base/compare/v1.0.8...v1.1.0)
 
 **Implemented enhancements:**
 
-- Bump Microting.eForm from 4.3.18 to 4.4.2 [\#48](https://github.com/microting/eform-inventory-base/issues/48)
+- Bump Microting.eFormApi.BasePn from 2.0.96 to 2.0.98 [\#49](https://github.com/microting/eform-inventory-base/issues/49)
 
 **Merged pull requests:**
 
@@ -840,7 +841,7 @@
 
 **Implemented enhancements:**
 
-- Bump Microting.eFormApi.BasePn from 2.0.96 to 2.0.98 [\#49](https://github.com/microting/eform-inventory-base/issues/49)
+- Bump Microting.eForm from 4.3.18 to 4.4.2 [\#48](https://github.com/microting/eform-inventory-base/issues/48)
 
 ## [v1.0.7](https://github.com/microting/eform-inventory-base/tree/v1.0.7) (2021-02-20)
 
@@ -880,6 +881,8 @@
 
 **Merged pull requests:**
 
+- Optimization fields database [\#62](https://github.com/microting/eform-inventory-base/pull/62) ([sanioooook](https://github.com/sanioooook))
+- Rename columns  and add missing columns [\#51](https://github.com/microting/eform-inventory-base/pull/51) ([sanioooook](https://github.com/sanioooook))
 - Bump NUnit from 3.12.0 to 3.13.1 [\#32](https://github.com/microting/eform-inventory-base/pull/32) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 - Bump NUnit3TestAdapter from 3.16.1 to 3.17.0 [\#6](https://github.com/microting/eform-inventory-base/pull/6) ([dependabot-preview[bot]](https://github.com/apps/dependabot-preview))
 
