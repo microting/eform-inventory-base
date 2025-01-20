@@ -59,27 +59,27 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(1, itemGroups.Count);
-            Assert.AreEqual(itemGroup.CreatedByUserId, itemGroups[0].CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, itemGroups[0].UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Name, itemGroups[0].Name);
-            Assert.AreEqual(itemGroup.Code, itemGroups[0].Code);
-            Assert.AreEqual(itemGroup.Description, itemGroups[0].Description);
-            Assert.AreEqual(1, itemGroups[0].Version);
-            Assert.AreEqual(Constants.WorkflowStates.Created, itemGroups[0].WorkflowState);
-            Assert.AreEqual(itemGroup.WorkflowState, itemGroups[0].WorkflowState);
+            Assert.That(itemGroups.Count, Is.EqualTo(1));
+            Assert.That(itemGroups[0].CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(itemGroups[0].UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(itemGroups[0].Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(itemGroups[0].Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(itemGroups[0].Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(itemGroups[0].Version, Is.EqualTo(1));
+            Assert.That(itemGroups[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(itemGroups[0].WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
 
 
             // versions
-            Assert.AreEqual(1, itemGroupVersions.Count);
-            Assert.AreEqual(itemGroup.CreatedByUserId, itemGroupVersions[0].CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, itemGroupVersions[0].UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Description, itemGroupVersions[0].Description);
-            Assert.AreEqual(itemGroup.Code, itemGroupVersions[0].Code);
-            Assert.AreEqual(itemGroup.Name, itemGroupVersions[0].Name);
-            Assert.AreEqual(itemGroup.Id, itemGroupVersions[0].ItemGroupId);
-            Assert.AreEqual(itemGroup.WorkflowState, itemGroupVersions[0].WorkflowState);
-            Assert.AreEqual(1, itemGroupVersions[0].Version);
+            Assert.That(itemGroupVersions.Count, Is.EqualTo(1));
+            Assert.That(itemGroupVersions[0].CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(itemGroupVersions[0].UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(itemGroupVersions[0].Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(itemGroupVersions[0].Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(itemGroupVersions[0].Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(itemGroupVersions[0].ItemGroupId, Is.EqualTo(itemGroup.Id));
+            Assert.That(itemGroupVersions[0].WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
+            Assert.That(itemGroupVersions[0].Version, Is.EqualTo(1));
         }
 
         [Test]
@@ -120,34 +120,34 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(itemGroup.CreatedByUserId, inventoryItemGroupFromDb.CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, inventoryItemGroupFromDb.UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Description, inventoryItemGroupFromDb.Description);
-            Assert.AreEqual(itemGroup.Code, inventoryItemGroupFromDb.Code);
-            Assert.AreEqual(itemGroup.Name, inventoryItemGroupFromDb.Name);
-            Assert.AreEqual(2, inventoryItemGroupFromDb.Version);
-            Assert.AreEqual(itemGroup.WorkflowState, inventoryItemGroupFromDb.WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemGroupFromDb.WorkflowState);
+            Assert.That(inventoryItemGroupFromDb.CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(inventoryItemGroupFromDb.UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(inventoryItemGroupFromDb.Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(inventoryItemGroupFromDb.Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(inventoryItemGroupFromDb.Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(inventoryItemGroupFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryItemGroupFromDb.WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
+            Assert.That(inventoryItemGroupFromDb.WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
 
             // versions
-            Assert.AreEqual(2, inventoryItemGroupVersions.Count);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.CreatedByUserId, inventoryItemGroupVersions[0].CreatedByUserId);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.UpdatedByUserId, inventoryItemGroupVersions[0].UpdatedByUserId);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Description, inventoryItemGroupVersions[0].Description);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Code, inventoryItemGroupVersions[0].Code);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Name, inventoryItemGroupVersions[0].Name);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.WorkflowState, inventoryItemGroupVersions[0].WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemGroupVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryItemGroupVersions[0].Version);
+            Assert.That(inventoryItemGroupVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryItemGroupVersions[0].CreatedByUserId, Is.EqualTo(oldInventoryItemGroupFromDb.CreatedByUserId));
+            Assert.That(inventoryItemGroupVersions[0].UpdatedByUserId, Is.EqualTo(oldInventoryItemGroupFromDb.UpdatedByUserId));
+            Assert.That(inventoryItemGroupVersions[0].Description, Is.EqualTo(oldInventoryItemGroupFromDb.Description));
+            Assert.That(inventoryItemGroupVersions[0].Code, Is.EqualTo(oldInventoryItemGroupFromDb.Code));
+            Assert.That(inventoryItemGroupVersions[0].Name, Is.EqualTo(oldInventoryItemGroupFromDb.Name));
+            Assert.That(inventoryItemGroupVersions[0].WorkflowState, Is.EqualTo(oldInventoryItemGroupFromDb.WorkflowState));
+            Assert.That(inventoryItemGroupVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemGroupVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(itemGroup.CreatedByUserId, inventoryItemGroupVersions[1].CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, inventoryItemGroupVersions[1].UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Description, inventoryItemGroupVersions[1].Description);
-            Assert.AreEqual(itemGroup.Code, inventoryItemGroupVersions[1].Code);
-            Assert.AreEqual(itemGroup.Name, inventoryItemGroupVersions[1].Name);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemGroupVersions[1].WorkflowState);
-            Assert.AreEqual(itemGroup.WorkflowState, inventoryItemGroupVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryItemGroupVersions[1].Version);
+            Assert.That(inventoryItemGroupVersions[1].CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(inventoryItemGroupVersions[1].UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(inventoryItemGroupVersions[1].Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(inventoryItemGroupVersions[1].Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(inventoryItemGroupVersions[1].Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(inventoryItemGroupVersions[1].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemGroupVersions[1].WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
+            Assert.That(inventoryItemGroupVersions[1].Version, Is.EqualTo(2));
         }
 
         [Test]
@@ -183,34 +183,34 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(itemGroup.CreatedByUserId, inventoryItemGroupFromDb.CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, inventoryItemGroupFromDb.UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Description, inventoryItemGroupFromDb.Description);
-            Assert.AreEqual(itemGroup.Code, inventoryItemGroupFromDb.Code);
-            Assert.AreEqual(itemGroup.Name, inventoryItemGroupFromDb.Name);
-            Assert.AreEqual(2, inventoryItemGroupFromDb.Version);
-            Assert.AreEqual(itemGroup.WorkflowState, inventoryItemGroupFromDb.WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryItemGroupFromDb.WorkflowState);
+            Assert.That(inventoryItemGroupFromDb.CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(inventoryItemGroupFromDb.UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(inventoryItemGroupFromDb.Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(inventoryItemGroupFromDb.Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(inventoryItemGroupFromDb.Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(inventoryItemGroupFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryItemGroupFromDb.WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
+            Assert.That(inventoryItemGroupFromDb.WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
 
             // versions
-            Assert.AreEqual(2, inventoryItemGroupVersions.Count);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.CreatedByUserId, inventoryItemGroupVersions[0].CreatedByUserId);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.UpdatedByUserId, inventoryItemGroupVersions[0].UpdatedByUserId);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Description, inventoryItemGroupVersions[0].Description);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Code, inventoryItemGroupVersions[0].Code);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.Name, inventoryItemGroupVersions[0].Name);
-            Assert.AreEqual(oldInventoryItemGroupFromDb.WorkflowState, inventoryItemGroupVersions[0].WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemGroupVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryItemGroupVersions[0].Version);
+            Assert.That(inventoryItemGroupVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryItemGroupVersions[0].CreatedByUserId, Is.EqualTo(oldInventoryItemGroupFromDb.CreatedByUserId));
+            Assert.That(inventoryItemGroupVersions[0].UpdatedByUserId, Is.EqualTo(oldInventoryItemGroupFromDb.UpdatedByUserId));
+            Assert.That(inventoryItemGroupVersions[0].Description, Is.EqualTo(oldInventoryItemGroupFromDb.Description));
+            Assert.That(inventoryItemGroupVersions[0].Code, Is.EqualTo(oldInventoryItemGroupFromDb.Code));
+            Assert.That(inventoryItemGroupVersions[0].Name, Is.EqualTo(oldInventoryItemGroupFromDb.Name));
+            Assert.That(inventoryItemGroupVersions[0].WorkflowState, Is.EqualTo(oldInventoryItemGroupFromDb.WorkflowState));
+            Assert.That(inventoryItemGroupVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemGroupVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(itemGroup.CreatedByUserId, inventoryItemGroupVersions[1].CreatedByUserId);
-            Assert.AreEqual(itemGroup.UpdatedByUserId, inventoryItemGroupVersions[1].UpdatedByUserId);
-            Assert.AreEqual(itemGroup.Name, inventoryItemGroupVersions[1].Name);
-            Assert.AreEqual(itemGroup.Code, inventoryItemGroupVersions[1].Code);
-            Assert.AreEqual(itemGroup.Description, inventoryItemGroupVersions[1].Description);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryItemGroupVersions[1].WorkflowState);
-            Assert.AreEqual(itemGroup.WorkflowState, inventoryItemGroupVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryItemGroupVersions[1].Version);
+            Assert.That(inventoryItemGroupVersions[1].CreatedByUserId, Is.EqualTo(itemGroup.CreatedByUserId));
+            Assert.That(inventoryItemGroupVersions[1].UpdatedByUserId, Is.EqualTo(itemGroup.UpdatedByUserId));
+            Assert.That(inventoryItemGroupVersions[1].Name, Is.EqualTo(itemGroup.Name));
+            Assert.That(inventoryItemGroupVersions[1].Code, Is.EqualTo(itemGroup.Code));
+            Assert.That(inventoryItemGroupVersions[1].Description, Is.EqualTo(itemGroup.Description));
+            Assert.That(inventoryItemGroupVersions[1].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
+            Assert.That(inventoryItemGroupVersions[1].WorkflowState, Is.EqualTo(itemGroup.WorkflowState));
+            Assert.That(inventoryItemGroupVersions[1].Version, Is.EqualTo(2));
         }
     }
 }

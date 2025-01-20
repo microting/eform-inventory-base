@@ -89,33 +89,33 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(1, items.Count);
-            Assert.AreEqual(item.CreatedByUserId, items[0].CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, items[0].UpdatedByUserId);
-            Assert.AreEqual(item.Available, items[0].Available);
-            Assert.AreEqual(item.ItemTypeId, items[0].ItemTypeId);
-            Assert.AreEqual(item.CustomerId, items[0].CustomerId);
-            Assert.AreEqual(item.Location, items[0].Location);
-            Assert.AreEqual(item.ExpirationDate, items[0].ExpirationDate);
-            Assert.AreEqual(item.SN, items[0].SN);
-            Assert.AreEqual(1, items[0].Version);
-            Assert.AreEqual(Constants.WorkflowStates.Created, items[0].WorkflowState);
-            Assert.AreEqual(item.WorkflowState, items[0].WorkflowState);
+            Assert.That(items.Count, Is.EqualTo(1));
+            Assert.That(items[0].CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(items[0].UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(items[0].Available, Is.EqualTo(item.Available));
+            Assert.That(items[0].ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(items[0].CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(items[0].Location, Is.EqualTo(item.Location));
+            Assert.That(items[0].ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(items[0].SN, Is.EqualTo(item.SN));
+            Assert.That(items[0].Version, Is.EqualTo(1));
+            Assert.That(items[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(items[0].WorkflowState, Is.EqualTo(item.WorkflowState));
 
 
             // versions
-            Assert.AreEqual(1, itemVersions.Count);
-            Assert.AreEqual(item.CreatedByUserId, itemVersions[0].CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, itemVersions[0].UpdatedByUserId);
-            Assert.AreEqual(item.Available, itemVersions[0].Available);
-            Assert.AreEqual(item.ItemTypeId, itemVersions[0].ItemTypeId);
-            Assert.AreEqual(item.CustomerId, itemVersions[0].CustomerId);
-            Assert.AreEqual(item.Location, itemVersions[0].Location);
-            Assert.AreEqual(item.ExpirationDate, itemVersions[0].ExpirationDate);
-            Assert.AreEqual(item.SN, itemVersions[0].SN);
-            Assert.AreEqual(item.Id, itemVersions[0].ItemTypeId);
-            Assert.AreEqual(item.WorkflowState, itemVersions[0].WorkflowState);
-            Assert.AreEqual(1, itemVersions[0].Version);
+            Assert.That(itemVersions.Count, Is.EqualTo(1));
+            Assert.That(itemVersions[0].CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(itemVersions[0].UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(itemVersions[0].Available, Is.EqualTo(item.Available));
+            Assert.That(itemVersions[0].ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(itemVersions[0].CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(itemVersions[0].Location, Is.EqualTo(item.Location));
+            Assert.That(itemVersions[0].ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(itemVersions[0].SN, Is.EqualTo(item.SN));
+            Assert.That(itemVersions[0].ItemTypeId, Is.EqualTo(item.Id));
+            Assert.That(itemVersions[0].WorkflowState, Is.EqualTo(item.WorkflowState));
+            Assert.That(itemVersions[0].Version, Is.EqualTo(1));
         }
 
         [Test]
@@ -187,43 +187,43 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(item.CreatedByUserId, inventoryItemFromDb.CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, inventoryItemFromDb.UpdatedByUserId);
-            Assert.AreEqual(item.Available, inventoryItemFromDb.Available);
-            Assert.AreEqual(item.ItemTypeId, inventoryItemFromDb.ItemTypeId);
-            Assert.AreEqual(item.CustomerId, inventoryItemFromDb.CustomerId);
-            Assert.AreEqual(item.Location, inventoryItemFromDb.Location);
-            Assert.AreEqual(item.ExpirationDate, inventoryItemFromDb.ExpirationDate);
-            Assert.AreEqual(item.SN, inventoryItemFromDb.SN);
-            Assert.AreEqual(2, inventoryItemFromDb.Version);
-            Assert.AreEqual(item.WorkflowState, inventoryItemFromDb.WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemFromDb.WorkflowState);
+            Assert.That(inventoryItemFromDb.CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(inventoryItemFromDb.UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(inventoryItemFromDb.Available, Is.EqualTo(item.Available));
+            Assert.That(inventoryItemFromDb.ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(inventoryItemFromDb.CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(inventoryItemFromDb.Location, Is.EqualTo(item.Location));
+            Assert.That(inventoryItemFromDb.ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(inventoryItemFromDb.SN, Is.EqualTo(item.SN));
+            Assert.That(inventoryItemFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryItemFromDb.WorkflowState, Is.EqualTo(item.WorkflowState));
+            Assert.That(inventoryItemFromDb.WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
 
             // versions
-            Assert.AreEqual(2, inventoryItemVersions.Count);
-            Assert.AreEqual(oldInventoryItemFromDb.CreatedByUserId, inventoryItemVersions[0].CreatedByUserId);
-            Assert.AreEqual(oldInventoryItemFromDb.UpdatedByUserId, inventoryItemVersions[0].UpdatedByUserId);
-            Assert.AreEqual(oldInventoryItemFromDb.Available, inventoryItemVersions[0].Available);
-            Assert.AreEqual(oldInventoryItemFromDb.ItemTypeId, inventoryItemVersions[0].ItemTypeId);
-            Assert.AreEqual(oldInventoryItemFromDb.CustomerId, inventoryItemVersions[0].CustomerId);
-            Assert.AreEqual(oldInventoryItemFromDb.Location, inventoryItemVersions[0].Location);
-            Assert.AreEqual(oldInventoryItemFromDb.ExpirationDate, inventoryItemVersions[0].ExpirationDate);
-            Assert.AreEqual(oldInventoryItemFromDb.SN, inventoryItemVersions[0].SN);
-            Assert.AreEqual(oldInventoryItemFromDb.WorkflowState, inventoryItemVersions[0].WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryItemVersions[0].Version);
+            Assert.That(inventoryItemVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryItemVersions[0].CreatedByUserId, Is.EqualTo(oldInventoryItemFromDb.CreatedByUserId));
+            Assert.That(inventoryItemVersions[0].UpdatedByUserId, Is.EqualTo(oldInventoryItemFromDb.UpdatedByUserId));
+            Assert.That(inventoryItemVersions[0].Available, Is.EqualTo(oldInventoryItemFromDb.Available));
+            Assert.That(inventoryItemVersions[0].ItemTypeId, Is.EqualTo(oldInventoryItemFromDb.ItemTypeId));
+            Assert.That(inventoryItemVersions[0].CustomerId, Is.EqualTo(oldInventoryItemFromDb.CustomerId));
+            Assert.That(inventoryItemVersions[0].Location, Is.EqualTo(oldInventoryItemFromDb.Location));
+            Assert.That(inventoryItemVersions[0].ExpirationDate, Is.EqualTo(oldInventoryItemFromDb.ExpirationDate));
+            Assert.That(inventoryItemVersions[0].SN, Is.EqualTo(oldInventoryItemFromDb.SN));
+            Assert.That(inventoryItemVersions[0].WorkflowState, Is.EqualTo(oldInventoryItemFromDb.WorkflowState));
+            Assert.That(inventoryItemVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(item.CreatedByUserId, inventoryItemVersions[1].CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, inventoryItemVersions[1].UpdatedByUserId);
-            Assert.AreEqual(item.Available, inventoryItemVersions[1].Available);
-            Assert.AreEqual(item.ItemTypeId, inventoryItemVersions[1].ItemTypeId);
-            Assert.AreEqual(item.Location, inventoryItemVersions[1].Location);
-            Assert.AreEqual(item.CustomerId, inventoryItemVersions[1].CustomerId);
-            Assert.AreEqual(item.ExpirationDate, inventoryItemVersions[1].ExpirationDate);
-            Assert.AreEqual(item.SN, inventoryItemVersions[1].SN);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemVersions[1].WorkflowState);
-            Assert.AreEqual(item.WorkflowState, inventoryItemVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryItemVersions[1].Version);
+            Assert.That(inventoryItemVersions[1].CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(inventoryItemVersions[1].UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(inventoryItemVersions[1].Available, Is.EqualTo(item.Available));
+            Assert.That(inventoryItemVersions[1].ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(inventoryItemVersions[1].Location, Is.EqualTo(item.Location));
+            Assert.That(inventoryItemVersions[1].CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(inventoryItemVersions[1].ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(inventoryItemVersions[1].SN, Is.EqualTo(item.SN));
+            Assert.That(inventoryItemVersions[1].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemVersions[1].WorkflowState, Is.EqualTo(item.WorkflowState));
+            Assert.That(inventoryItemVersions[1].Version, Is.EqualTo(2));
         }
 
         [Test]
@@ -289,43 +289,43 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(item.CreatedByUserId, inventoryItemFromDb.CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, inventoryItemFromDb.UpdatedByUserId);
-            Assert.AreEqual(item.Available, inventoryItemFromDb.Available);
-            Assert.AreEqual(item.ItemTypeId, inventoryItemFromDb.ItemTypeId);
-            Assert.AreEqual(item.CustomerId, inventoryItemFromDb.CustomerId);
-            Assert.AreEqual(item.Location, inventoryItemFromDb.Location);
-            Assert.AreEqual(item.ExpirationDate, inventoryItemFromDb.ExpirationDate);
-            Assert.AreEqual(item.SN, inventoryItemFromDb.SN);
-            Assert.AreEqual(2, inventoryItemFromDb.Version);
-            Assert.AreEqual(item.WorkflowState, inventoryItemFromDb.WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryItemFromDb.WorkflowState);
+            Assert.That(inventoryItemFromDb.CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(inventoryItemFromDb.UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(inventoryItemFromDb.Available, Is.EqualTo(item.Available));
+            Assert.That(inventoryItemFromDb.ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(inventoryItemFromDb.CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(inventoryItemFromDb.Location, Is.EqualTo(item.Location));
+            Assert.That(inventoryItemFromDb.ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(inventoryItemFromDb.SN, Is.EqualTo(item.SN));
+            Assert.That(inventoryItemFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryItemFromDb.WorkflowState, Is.EqualTo(item.WorkflowState));
+            Assert.That(inventoryItemFromDb.WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
 
             // versions
-            Assert.AreEqual(2, inventoryItemVersions.Count);
-            Assert.AreEqual(oldInventoryItemFromDb.CreatedByUserId, inventoryItemVersions[0].CreatedByUserId);
-            Assert.AreEqual(oldInventoryItemFromDb.UpdatedByUserId, inventoryItemVersions[0].UpdatedByUserId);
-            Assert.AreEqual(oldInventoryItemFromDb.Available, inventoryItemVersions[0].Available);
-            Assert.AreEqual(oldInventoryItemFromDb.ItemTypeId, inventoryItemVersions[0].ItemTypeId);
-            Assert.AreEqual(oldInventoryItemFromDb.CustomerId, inventoryItemVersions[0].CustomerId);
-            Assert.AreEqual(oldInventoryItemFromDb.Location, inventoryItemVersions[0].Location);
-            Assert.AreEqual(oldInventoryItemFromDb.ExpirationDate, inventoryItemVersions[0].ExpirationDate);
-            Assert.AreEqual(oldInventoryItemFromDb.SN, inventoryItemVersions[0].SN);
-            Assert.AreEqual(oldInventoryItemFromDb.WorkflowState, inventoryItemVersions[0].WorkflowState);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryItemVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryItemVersions[0].Version);
+            Assert.That(inventoryItemVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryItemVersions[0].CreatedByUserId, Is.EqualTo(oldInventoryItemFromDb.CreatedByUserId));
+            Assert.That(inventoryItemVersions[0].UpdatedByUserId, Is.EqualTo(oldInventoryItemFromDb.UpdatedByUserId));
+            Assert.That(inventoryItemVersions[0].Available, Is.EqualTo(oldInventoryItemFromDb.Available));
+            Assert.That(inventoryItemVersions[0].ItemTypeId, Is.EqualTo(oldInventoryItemFromDb.ItemTypeId));
+            Assert.That(inventoryItemVersions[0].CustomerId, Is.EqualTo(oldInventoryItemFromDb.CustomerId));
+            Assert.That(inventoryItemVersions[0].Location, Is.EqualTo(oldInventoryItemFromDb.Location));
+            Assert.That(inventoryItemVersions[0].ExpirationDate, Is.EqualTo(oldInventoryItemFromDb.ExpirationDate));
+            Assert.That(inventoryItemVersions[0].SN, Is.EqualTo(oldInventoryItemFromDb.SN));
+            Assert.That(inventoryItemVersions[0].WorkflowState, Is.EqualTo(oldInventoryItemFromDb.WorkflowState));
+            Assert.That(inventoryItemVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryItemVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(item.CreatedByUserId, inventoryItemVersions[1].CreatedByUserId);
-            Assert.AreEqual(item.UpdatedByUserId, inventoryItemVersions[1].UpdatedByUserId);
-            Assert.AreEqual(item.Available, inventoryItemVersions[1].Available);
-            Assert.AreEqual(item.ItemTypeId, inventoryItemVersions[1].ItemTypeId);
-            Assert.AreEqual(item.Location, inventoryItemVersions[1].Location);
-            Assert.AreEqual(item.CustomerId, inventoryItemVersions[1].CustomerId);
-            Assert.AreEqual(item.ExpirationDate, inventoryItemVersions[1].ExpirationDate);
-            Assert.AreEqual(item.SN, inventoryItemVersions[1].SN);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryItemVersions[1].WorkflowState);
-            Assert.AreEqual(item.WorkflowState, inventoryItemVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryItemVersions[1].Version);
+            Assert.That(inventoryItemVersions[1].CreatedByUserId, Is.EqualTo(item.CreatedByUserId));
+            Assert.That(inventoryItemVersions[1].UpdatedByUserId, Is.EqualTo(item.UpdatedByUserId));
+            Assert.That(inventoryItemVersions[1].Available, Is.EqualTo(item.Available));
+            Assert.That(inventoryItemVersions[1].ItemTypeId, Is.EqualTo(item.ItemTypeId));
+            Assert.That(inventoryItemVersions[1].Location, Is.EqualTo(item.Location));
+            Assert.That(inventoryItemVersions[1].CustomerId, Is.EqualTo(item.CustomerId));
+            Assert.That(inventoryItemVersions[1].ExpirationDate, Is.EqualTo(item.ExpirationDate));
+            Assert.That(inventoryItemVersions[1].SN, Is.EqualTo(item.SN));
+            Assert.That(inventoryItemVersions[1].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
+            Assert.That(inventoryItemVersions[1].WorkflowState, Is.EqualTo(item.WorkflowState));
+            Assert.That(inventoryItemVersions[1].Version, Is.EqualTo(2));
         }
     }
 }

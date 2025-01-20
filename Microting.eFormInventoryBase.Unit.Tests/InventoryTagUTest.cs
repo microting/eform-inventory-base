@@ -55,25 +55,25 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(1, inventoryTagsList.Count);
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsList[0].CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsList[0].UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagsList[0].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsList[0].Id);
-            Assert.AreEqual(1, inventoryTagsList[0].Version);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryTagsList[0].WorkflowState);
-            Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagsList[0].WorkflowState);
+            Assert.That(inventoryTagsList.Count, Is.EqualTo(1));
+            Assert.That(inventoryTagsList[0].CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagsList[0].UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagsList[0].Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagsList[0].Id, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagsList[0].Version, Is.EqualTo(1));
+            Assert.That(inventoryTagsList[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryTagsList[0].WorkflowState, Is.EqualTo(inventoryTag.WorkflowState));
 
 
             // versions
-            Assert.AreEqual(1, inventoryTagsListVersions.Count);
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsListVersions[0].CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsListVersions[0].UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagsListVersions[0].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[0].InventoryTagId);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryTagsListVersions[0].WorkflowState);
-            Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagsListVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryTagsListVersions[0].Version);
+            Assert.That(inventoryTagsListVersions.Count, Is.EqualTo(1));
+            Assert.That(inventoryTagsListVersions[0].CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagsListVersions[0].InventoryTagId, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagsListVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryTagsListVersions[0].WorkflowState, Is.EqualTo(inventoryTag.WorkflowState));
+            Assert.That(inventoryTagsListVersions[0].Version, Is.EqualTo(1));
         }
 
         [Test]
@@ -109,28 +109,28 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagFromDb.CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagFromDb.UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagFromDb.Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagFromDb.Id);
-            Assert.AreEqual(2, inventoryTagFromDb.Version);
-            Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagFromDb.WorkflowState);
+            Assert.That(inventoryTagFromDb.CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagFromDb.UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagFromDb.Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagFromDb.Id, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryTagFromDb.WorkflowState, Is.EqualTo(inventoryTag.WorkflowState));
 
             // versions
-            Assert.AreEqual(2, inventoryTagsListVersions.Count);
-            Assert.AreEqual(oldInventoryTagsList.CreatedByUserId, inventoryTagsListVersions[0].CreatedByUserId);
-            Assert.AreEqual(oldInventoryTagsList.UpdatedByUserId, inventoryTagsListVersions[0].UpdatedByUserId);
-            Assert.AreEqual(oldInventoryTagsList.Name, inventoryTagsListVersions[0].Name);
-            Assert.AreEqual(oldInventoryTagsList.Id, inventoryTagsListVersions[0].InventoryTagId);
-            Assert.AreEqual(oldInventoryTagsList.WorkflowState, inventoryTagsListVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryTagsListVersions[0].Version);
+            Assert.That(inventoryTagsListVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryTagsListVersions[0].CreatedByUserId, Is.EqualTo(oldInventoryTagsList.CreatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].UpdatedByUserId, Is.EqualTo(oldInventoryTagsList.UpdatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].Name, Is.EqualTo(oldInventoryTagsList.Name));
+            Assert.That(inventoryTagsListVersions[0].InventoryTagId, Is.EqualTo(oldInventoryTagsList.Id));
+            Assert.That(inventoryTagsListVersions[0].WorkflowState, Is.EqualTo(oldInventoryTagsList.WorkflowState));
+            Assert.That(inventoryTagsListVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsListVersions[1].CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsListVersions[1].UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagsListVersions[1].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[1].InventoryTagId);
-            Assert.AreEqual(inventoryTag.WorkflowState, inventoryTagsListVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryTagsListVersions[1].Version);
+            Assert.That(inventoryTagsListVersions[1].CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagsListVersions[1].UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagsListVersions[1].Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagsListVersions[1].InventoryTagId, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagsListVersions[1].WorkflowState, Is.EqualTo(inventoryTag.WorkflowState));
+            Assert.That(inventoryTagsListVersions[1].Version, Is.EqualTo(2));
         }
 
         [Test]
@@ -159,28 +159,28 @@ namespace Microting.eFormInventoryBase.Unit.Tests
 
 
             // Assert
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagFromDb.CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagFromDb.UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagFromDb.Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagFromDb.Id);
-            Assert.AreEqual(2, inventoryTagFromDb.Version);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryTagFromDb.WorkflowState);
+            Assert.That(inventoryTagFromDb.CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagFromDb.UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagFromDb.Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagFromDb.Id, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagFromDb.Version, Is.EqualTo(2));
+            Assert.That(inventoryTagFromDb.WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
 
             // versions
-            Assert.AreEqual(2, inventoryTagsListVersions.Count);
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsListVersions[0].CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsListVersions[0].UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagsListVersions[0].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[0].InventoryTagId);
-            Assert.AreEqual(Constants.WorkflowStates.Created, inventoryTagsListVersions[0].WorkflowState);
-            Assert.AreEqual(1, inventoryTagsListVersions[0].Version);
+            Assert.That(inventoryTagsListVersions.Count, Is.EqualTo(2));
+            Assert.That(inventoryTagsListVersions[0].CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagsListVersions[0].Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagsListVersions[0].InventoryTagId, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagsListVersions[0].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Created));
+            Assert.That(inventoryTagsListVersions[0].Version, Is.EqualTo(1));
 
-            Assert.AreEqual(inventoryTag.CreatedByUserId, inventoryTagsListVersions[1].CreatedByUserId);
-            Assert.AreEqual(inventoryTag.UpdatedByUserId, inventoryTagsListVersions[1].UpdatedByUserId);
-            Assert.AreEqual(inventoryTag.Name, inventoryTagsListVersions[1].Name);
-            Assert.AreEqual(inventoryTag.Id, inventoryTagsListVersions[1].InventoryTagId);
-            Assert.AreEqual(Constants.WorkflowStates.Removed, inventoryTagsListVersions[1].WorkflowState);
-            Assert.AreEqual(2, inventoryTagsListVersions[1].Version);
+            Assert.That(inventoryTagsListVersions[1].CreatedByUserId, Is.EqualTo(inventoryTag.CreatedByUserId));
+            Assert.That(inventoryTagsListVersions[1].UpdatedByUserId, Is.EqualTo(inventoryTag.UpdatedByUserId));
+            Assert.That(inventoryTagsListVersions[1].Name, Is.EqualTo(inventoryTag.Name));
+            Assert.That(inventoryTagsListVersions[1].InventoryTagId, Is.EqualTo(inventoryTag.Id));
+            Assert.That(inventoryTagsListVersions[1].WorkflowState, Is.EqualTo(Constants.WorkflowStates.Removed));
+            Assert.That(inventoryTagsListVersions[1].Version, Is.EqualTo(2));
         }
     }
 }
