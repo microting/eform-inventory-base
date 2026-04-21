@@ -24,7 +24,7 @@ namespace Microting.eFormInventoryBase.Infrastructure.Data.Factories
     using System.Linq;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Design;
-    using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+    using Microting.EntityFrameworkCore.MySql.Infrastructure;
 
     public class InventoryPnContextFactory : IDesignTimeDbContextFactory<InventoryPnDbContext>
     {
