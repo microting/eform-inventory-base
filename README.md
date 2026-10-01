@@ -1,8 +1,7 @@
 # eform-inventory-base
-[![.NET Version Release](https://github.com/microting/eform-basecustomer-base/actions/workflows/dotnet-core.yml/badge.svg)](https://github.com/microting/eform-basecustomer-base/actions/workflows/dotnet-core.yml)
-[![NuGet Badge](https://buildstats.info/nuget/Microting.eFormInventoryBase)](https://www.nuget.org/packages/Microting.eFormInventoryBase/)
-[![Maintainability](https://api.codeclimate.com/v1/badges/171dec7adbfc18beca54/maintainability)](https://codeclimate.com/github/microting/eform-inventory-base/maintainability)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f80971dd71d64734a5102bde7c9b23a8)](https://www.codacy.com/gh/microting/eform-inventory-base/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=microting/eform-inventory-base&amp;utm_campaign=Badge_Grade)
+
+> **Retired.** The inventory plugin is no longer maintained: no tenant uses it, and its UI does not
+> build against the current eForm Angular Frontend. See microting/eform-angular-inventory-plugin#38.
 
 ## NOTICE! this is not a standalone project and needs to be used with eForm Angular Frontend.
 
